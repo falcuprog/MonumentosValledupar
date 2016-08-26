@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleView_monabs"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/slider1">
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/person_name_monabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="person_name"
+        android:layout_alignTop="@+id/circleView_monabs"
+        android:layout_toRightOf="@+id/circleView_monabs"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="18dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#c2110e"
+        android:layout_toEndOf="@+id/circleView_monabs">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="person_address"
+        android:id="@+id/person_address_monabs"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/person_name_monabs"
+        android:layout_alignLeft="@+id/person_name_monabs"
+        android:layout_alignStart="@+id/person_name_monabs">
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#2196F3"
+        android:layout_below="@+id/circleView_monabs"
+        android:layout_alignLeft="@+id/circleView_monabs"
+        android:layout_marginTop="8dp">
+    </View>
+
+</RelativeLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+</LinearLayout>-->

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/gppal_id"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/inicio_id"
+            android:title="Inicio"
+            android:icon="@drawable/interfaz_de_hogar">
+        </item>
+
+        <item
+            android:id="@+id/busqr_id"
+            android:title="Búsqueda QR"
+            android:icon="@drawable/tecnologia">
+        </item>
+
+        <item
+            android:id="@+id/busgps_id"
+            android:title="Búsqueda GPS"
+            android:icon="@drawable/gps">
+        </item>
+
+        <item
+            android:id="@+id/buscat_id"
+            android:title="Búsqueda Categorías"
+            android:icon="@drawable/signos">
+        </item>
+
+    </group>
+    <group
+        android:id="@+id/gsecu_id"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/contac_id"
+            android:title="Contacto"
+            android:icon="@drawable/email">
+        </item>
+
+        <item
+            android:id="@+id/acerca_id"
+            android:title="Acerca de"
+            android:icon="@drawable/signos_1">
+        </item>
+
+    </group>
+
+</menu>
