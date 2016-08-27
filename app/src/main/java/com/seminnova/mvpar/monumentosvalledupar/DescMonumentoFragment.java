@@ -2,6 +2,8 @@ package com.seminnova.mvpar.monumentosvalledupar;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -99,7 +101,7 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
 
     }
 
-    /*@Override
+    @Override
     public void onResume() {
         super.onResume();
 
@@ -125,5 +127,5 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
             }
         });
 
-    }*/
+    }
 }

@@ -2,8 +2,10 @@ package com.seminnova.mvpar.monumentosvalledupar;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -72,7 +74,7 @@ public class MonAbsFragment extends Fragment {
         return allItems;
     }*/
 
-    /*@Override
+    @Override
     public void onResume() {
         super.onResume();
 
@@ -89,7 +91,7 @@ public class MonAbsFragment extends Fragment {
                     FragmentManager fragMana = getFragmentManager();
                     fragMana.beginTransaction()
                             .remove(MonAbsFragment.this)
-                            .replace(R.id.content_frame, fragment)
+                            .replace(R.id.content_frame2, fragment)
                             .commit();
 
                     return true;
@@ -98,6 +100,6 @@ public class MonAbsFragment extends Fragment {
             }
         });
 
-    }*/
+    }
 
 }

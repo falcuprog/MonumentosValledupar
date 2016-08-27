@@ -110,7 +110,6 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
         allItems.add(new ItemObjectMonAbs("Sierra Nevada: Montaña Sagrada", "New Heaven Enugu, Nigeria", R.drawable.slider4_copia));
         allItems.add(new ItemObjectMonAbs("El Obelisco", "Italion Gata, Padova, Italy", R.drawable.slider5_copia));
         allItems.add(new ItemObjectMonAbs("Revolución en Marcha", "San Fransisco, United States", R.drawable.slider6_copia));
-        allItems.add(new ItemObjectMonAbs("Monumento a las Banderas", "Queens Crescent, New Zealand", R.drawable.slider7_copia));
         allItems.add(new ItemObjectMonAbs("Luna Vallenata", "Queens Crescent, New Zealand", R.drawable.slider7_copia));
 
         return allItems;
