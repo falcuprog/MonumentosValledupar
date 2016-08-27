@@ -22,7 +22,4 @@ public class ItemObject {
         return photo;
     }
 
-    public void setPhoto(int photo) {
-        this.photo = photo;
-    }
 }
