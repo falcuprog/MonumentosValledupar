@@ -1,7 +1,8 @@
 package com.seminnova.mvpar.monumentosvalledupar;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,8 +40,6 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
 
     }
 
-
-
     @Override
     public void handleResult(Result rawResult) {
         String codigo;
@@ -68,12 +67,12 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
                     // handle back button's click listener
                     //Toast.makeText(getActivity(), "Back press", Toast.LENGTH_SHORT).show();
 
-                    /*Fragment fragment = new InicioFragment();
+                    Fragment fragment = new InicioFragment();
                     FragmentManager fragMana = getFragmentManager();
                     fragMana.beginTransaction()
                             .remove(CodigoqrFragment.this)
                             .replace(R.id.content_frame2, fragment)
-                            .commit();*/
+                            .commit();
 
                     return true;
                 }

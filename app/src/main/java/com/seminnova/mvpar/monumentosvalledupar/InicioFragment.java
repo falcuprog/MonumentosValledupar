@@ -25,6 +25,7 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class InicioFragment extends Fragment implements BaseSliderView.OnSliderClickListener {
@@ -98,7 +99,7 @@ public class InicioFragment extends Fragment implements BaseSliderView.OnSliderC
         mTabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
         //mAdapter = new YourPagerAdapter(getActivity().getSupportFragmentManager());
         mAdapter = new YourPagerAdapter(getActivity().getSupportFragmentManager());
-                //getSupportFragmentManager());
+        //getSupportFragmentManager());
         mPager = (ViewPager) view.findViewById(R.id.view_pager);
         mPager.setAdapter(mAdapter);
         //Notice how the Tab Layout links with the Pager Adapter
@@ -110,12 +111,6 @@ public class InicioFragment extends Fragment implements BaseSliderView.OnSliderC
 
         return view;
 
-    }
-
-    @Override
-    public void onStop() {
-        mDemoSlider.stopAutoCycle();
-        super.onStop();
     }
 
     @Override
@@ -141,15 +136,17 @@ public class InicioFragment extends Fragment implements BaseSliderView.OnSliderC
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            //Bundle arguments = getArguments();
-            //int pageNumber = arguments.getInt(ARG_PAGE);
+            Bundle arguments = getArguments();
+            int pageNumber = arguments.getInt(ARG_PAGE);
             RecyclerView recyclerView = new RecyclerView(getActivity());
             recyclerView.setAdapter(new YourRecyclerAdapter(getActivity()));
             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
             return recyclerView;
         }
     }
+
 }
+
 
 class YourPagerAdapter extends FragmentStatePagerAdapter {
 
@@ -157,7 +154,6 @@ class YourPagerAdapter extends FragmentStatePagerAdapter {
         super(fm);
     }
     static int pos;
-
     @Override
     public Fragment getItem(int position) {
         InicioFragment.MyFragment myFragment = InicioFragment.MyFragment.newInstance(position);
@@ -167,21 +163,22 @@ class YourPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 1;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return "0" + (position + 1);
+        return "";
     }
 }
 
 class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourRecyclerViewHolder> {
-
+    private ArrayList<String> list = new ArrayList<>();
     private LayoutInflater inflater;
 
     public YourRecyclerAdapter(Context context) {
         inflater = LayoutInflater.from(context);
+
     }
 
     @Override
@@ -195,37 +192,39 @@ class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourR
     @Override
     public void onBindViewHolder(YourRecyclerViewHolder yourRecyclerViewHolder, int i) {
 
+
         if (YourPagerAdapter.pos == 0) {
 
             yourRecyclerViewHolder.webView.setWebViewClient(new Callback());
             WebSettings webSettings = yourRecyclerViewHolder.webView.getSettings();
             webSettings.setBuiltInZoomControls(true);
-
             webSettings.setJavaScriptEnabled(true);
             yourRecyclerViewHolder.webView.clearCache(true);
-            yourRecyclerViewHolder.webView.loadUrl("http://www.milanadictos.net/");
-        }else if (YourPagerAdapter.pos == 1) {
+            yourRecyclerViewHolder.webView.loadUrl("http://elpilon.com.co/la-restauracion-del-coliseo-julio-monsalvo");
+        }
+        /*}else if (YourPagerAdapter.pos == 1) {
+
             yourRecyclerViewHolder.webView.setWebViewClient(new Callback());
             WebSettings webSettings = yourRecyclerViewHolder.webView.getSettings();
             webSettings.setBuiltInZoomControls(true);
-
             webSettings.setJavaScriptEnabled(true);
             yourRecyclerViewHolder.webView.clearCache(true);
             yourRecyclerViewHolder.webView.loadUrl("http://www.youtube.com/");
         } else if(YourPagerAdapter.pos == 2) {
+
             yourRecyclerViewHolder.webView.setWebViewClient(new Callback());
             WebSettings webSettings = yourRecyclerViewHolder.webView.getSettings();
             webSettings.setBuiltInZoomControls(true);
             webSettings.setJavaScriptEnabled(true);
-
             yourRecyclerViewHolder.webView.clearCache(true);
             yourRecyclerViewHolder.webView.loadUrl("http://www.elpilon.com.co/");
-        }
+        }*/
+
     }
 
     private class Callback extends WebViewClient {
         @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url){
+        public boolean shouldOverrideUrlLoading(WebView view,String url){
             return (false);
         }
     }
@@ -245,3 +244,33 @@ class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourR
         }
     }
 }
+
+
+
+
+       /* if (YourPagerAdapter.pos == 0) {
+
+            WebSettings webSettings = yourRecyclerViewHolder.webView.getSettings();
+            webSettings.setBuiltInZoomControls(true);
+            yourRecyclerViewHolder.webView.setWebViewClient(new Callback());
+            webSettings.setJavaScriptEnabled(true);
+            yourRecyclerViewHolder.webView.clearCache(true);
+            yourRecyclerViewHolder.webView.loadUrl("http://www.milanadictos.net/");
+        }else if (YourPagerAdapter.pos == 1) {
+            yourRecyclerViewHolder.webView.setWebViewClient(new Callback());
+            WebSettings webSettings = yourRecyclerViewHolder.webView.getSettings();
+            webSettings.setBuiltInZoomControls(true);
+
+            webSettings.setJavaScriptEnabled(true);
+            yourRecyclerViewHolder.webView.clearCache(true);
+            yourRecyclerViewHolder.webView.loadUrl("http://www.youtube.com/");
+        } else if(YourPagerAdapter.pos == 2) {
+            yourRecyclerViewHolder.webView.setWebViewClient(new Callback());
+            WebSettings webSettings = yourRecyclerViewHolder.webView.getSettings();
+            webSettings.setBuiltInZoomControls(true);
+            webSettings.setJavaScriptEnabled(true);
+            yourRecyclerViewHolder.webView.clearCache(true);
+            yourRecyclerViewHolder.webView.loadUrl("http://www.elpilon.com.co/");
+        }
+
+    }*/
