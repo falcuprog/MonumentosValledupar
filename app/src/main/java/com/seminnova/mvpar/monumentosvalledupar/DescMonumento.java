@@ -89,17 +89,8 @@ public class DescMonumento {
                                 .replace(R.id.content_frame2, fragment)
                                 .commit();
                         break;
+
                     case 6:
-
-                        titulo = "Monumento a las Banderas";
-                        lista.add(R.drawable.slider1);
-
-                        fragment = new DescMonumentoFragment();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
-                                .commit();
-                        break;
-                    case 7:
 
                         titulo = "Luna Vallenata";
 
@@ -118,8 +109,7 @@ public class DescMonumento {
 
                     case 0:
 
-                        titulo = "María Concepción Loperena";
-                        lista.add(R.drawable.slider1);
+                        titulo = "Hernando de Santana";
 
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
@@ -129,7 +119,7 @@ public class DescMonumento {
 
                     case 1:
 
-                        titulo = "Hernando de Santana";
+                        titulo = "Pilonera Mayor";
 
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
@@ -138,28 +128,6 @@ public class DescMonumento {
                         break;
 
                     case 2:
-
-                        titulo = "Simón Bolívar";
-                        lista.add(R.drawable.slider1);
-                        lista.add(R.drawable.slider2);
-
-                        fragment = new DescMonumentoFragment();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
-                                .commit();
-                        break;
-
-                    case 3:
-
-                        titulo = "Consuelo Araújo";
-
-                        fragment = new DescMonumentoFragment();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
-                                .commit();
-                        break;
-
-                    case 4:
 
                         titulo = "Cacique Upar";
                         lista.add(R.drawable.slider1);
@@ -170,17 +138,7 @@ public class DescMonumento {
                                 .commit();
                         break;
 
-                    case 5:
-
-                        titulo = "Alfonso López Pumarejo";
-
-                        fragment = new DescMonumentoFragment();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
-                                .commit();
-                        break;
-
-                    case 6:
+                    case 3:
 
                         titulo = "El Viajero";
                         lista.add(R.drawable.slider1);
@@ -191,7 +149,7 @@ public class DescMonumento {
                                 .commit();
                         break;
 
-                    case 7:
+                    case 4:
 
                         titulo = "Parque de las Madres";
 
@@ -201,35 +159,6 @@ public class DescMonumento {
                                 .commit();
                         break;
 
-                    case 8:
-
-                        titulo = "Luis Carlos Galán";
-
-                        fragment = new DescMonumentoFragment();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
-                                .commit();
-                        break;
-
-                    case 9:
-
-                        titulo = "Mardoqueo Montaña";
-
-                        fragment = new DescMonumentoFragment();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
-                                .commit();
-                        break;
-
-                    case 10:
-
-                        titulo = "Alfonso López Michelsen";
-
-                        fragment = new DescMonumentoFragment();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
-                                .commit();
-                        break;
                 }
                 break;
 
@@ -429,27 +358,6 @@ public class DescMonumento {
                 switch (monumento) {
 
                     case 0:
-
-                        titulo = "Coliseo";
-                        lista.add(R.drawable.slider1);
-
-                        fragment = new DescMonumentoFragment();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
-                                .commit();
-                        break;
-
-                    case 1:
-
-                        titulo = "Raqueta";
-
-                        fragment = new DescMonumentoFragment();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
-                                .commit();
-                        break;
-
-                    case 2:
 
                         titulo = "Skate";
                         lista.add(R.drawable.slider1);

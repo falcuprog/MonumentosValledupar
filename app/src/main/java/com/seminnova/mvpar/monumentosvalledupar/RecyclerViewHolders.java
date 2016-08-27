@@ -118,17 +118,12 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
     private List<ItemObjectMonAbs> getAllItemListCat1(){
 
         List<ItemObjectMonAbs> allItems = new ArrayList<ItemObjectMonAbs>();
-        allItems.add(new ItemObjectMonAbs("María Concepción Loperena", "Vildansvagen 19, Lund Sweden", R.drawable.slider1_copia));
+
         allItems.add(new ItemObjectMonAbs("Hernando de Santana", "3 Villa Crescent London, UK", R.drawable.slider2_copia));
-        allItems.add(new ItemObjectMonAbs("Simón Bolívar", "Victoria Island Lagos, Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Consuelo Araújo", "New Heaven Enugu, Nigeria", R.drawable.slider4_copia));
+        allItems.add(new ItemObjectMonAbs("Pilonera Mayor", "New Heaven Enugu, Nigeria", R.drawable.slider4_copia));
         allItems.add(new ItemObjectMonAbs("Cacique Upar", "Italion Gata, Padova, Italy", R.drawable.slider5_copia));
-        allItems.add(new ItemObjectMonAbs("Alfonso López Pumarejo", "San Fransisco, United States", R.drawable.slider6_copia));
         allItems.add(new ItemObjectMonAbs("El Viajero", "Queens Crescent, New Zealand", R.drawable.slider7_copia));
         allItems.add(new ItemObjectMonAbs("Parque de las Madres", "Ivory Lane, Abuja, Nigeria", R.drawable.slider1_copia));
-        allItems.add(new ItemObjectMonAbs("Luis Carlos Galán", "Johnson Road, Port Harcourt, Nigeria", R.drawable.slider2_copia));
-        allItems.add(new ItemObjectMonAbs("Mardoqueo Montaña", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Alfonso López Michelsen", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
 
         return allItems;
     }
@@ -161,8 +156,6 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
     private List<ItemObjectMonAbs> getAllItemListCat3(){
 
         List<ItemObjectMonAbs> allItems = new ArrayList<ItemObjectMonAbs>();
-        allItems.add(new ItemObjectMonAbs("Coliseo", "Vildansvagen 19, Lund Sweden", R.drawable.slider1_copia));
-        allItems.add(new ItemObjectMonAbs("Raqueta", "3 Villa Crescent London, UK", R.drawable.slider2_copia));
         allItems.add(new ItemObjectMonAbs("Skate", "3 Villa Crescent London, UK", R.drawable.slider2_copia));
 
         return allItems;
