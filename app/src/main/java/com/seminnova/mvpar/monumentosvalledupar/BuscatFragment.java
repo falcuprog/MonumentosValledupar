@@ -2,9 +2,11 @@ package com.seminnova.mvpar.monumentosvalledupar;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -66,7 +68,7 @@ public class BuscatFragment extends Fragment {
         return allItems;
     }
 
-    /*@Override
+    @Override
     public void onResume() {
         super.onResume();
 
@@ -79,19 +81,18 @@ public class BuscatFragment extends Fragment {
                     // handle back button's click listener
                     //Toast.makeText(getActivity(), "Back press", Toast.LENGTH_SHORT).show();
 
-                    /*Fragment fragment = new InicioFragment();
+                    Fragment fragment = new InicioFragment();
                     FragmentManager fragMana = getFragmentManager();
                     fragMana.beginTransaction()
                             .remove(BuscatFragment.this)
-                            .replace(R.id.content_frame, fragment)
+                            .replace(R.id.content_frame2, fragment)
                             .commit();
-                    */
-      /*              return true;
+
+                    return true;
                 }
                 return false;
             }
         });
 
-    }*/
-
+    }
 }

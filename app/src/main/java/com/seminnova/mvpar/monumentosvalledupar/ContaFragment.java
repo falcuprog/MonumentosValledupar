@@ -2,6 +2,8 @@ package com.seminnova.mvpar.monumentosvalledupar;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +21,7 @@ public class ContaFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_conta, container, false);
     }
 
-    /*@Override
+    @Override
     public void onResume() {
         super.onResume();
 
@@ -36,7 +38,7 @@ public class ContaFragment extends Fragment {
                     FragmentManager fragMana = getFragmentManager();
                     fragMana.beginTransaction()
                             .remove(ContaFragment.this)
-                            .replace(R.id.content_frame, fragment)
+                            .replace(R.id.content_frame2, fragment)
                             .commit();
 
                     return true;
@@ -45,5 +47,5 @@ public class ContaFragment extends Fragment {
             }
         });
 
-    }*/
+    }
 }
