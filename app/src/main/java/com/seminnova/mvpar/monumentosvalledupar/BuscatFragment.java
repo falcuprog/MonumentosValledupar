@@ -60,7 +60,7 @@ public class BuscatFragment extends Fragment {
 
         List<ItemObject> allItems = new ArrayList<ItemObject>();
         allItems.add(new ItemObject("Monumentos Abstractos y Simbólicos", R.drawable.slider1));
-        allItems.add(new ItemObject("Monumentos Biográficos y Históricos", R.drawable.slider3));
+        allItems.add(new ItemObject("Monumentos Biográficos e Históricos", R.drawable.slider3));
         allItems.add(new ItemObject("Monumentos Culturales y Folclóricos", R.drawable.slider4));
         allItems.add(new ItemObject("Monumentos Deportivos", R.drawable.slider4));
         allItems.add(new ItemObject("Monumentos Religiosos", R.drawable.slider7));
