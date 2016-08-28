@@ -44,7 +44,7 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
     public void handleResult(Result rawResult) {
         String codigo;
         codigo = rawResult.getText();
-        Toast.makeText(this.getActivity(), codigo, Toast.LENGTH_LONG).show();
+        Toast.makeText(this.getActivity(), codigo, Toast.LENGTH_SHORT).show();
         escaner.resumeCameraPreview(this);
     }
 
