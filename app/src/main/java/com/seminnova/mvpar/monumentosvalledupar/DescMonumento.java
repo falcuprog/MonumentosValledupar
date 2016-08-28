@@ -49,6 +49,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
                     case 2:
@@ -60,6 +61,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
                     case 3:
@@ -69,6 +71,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
                     case 4:
@@ -79,6 +82,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
                     case 5:
@@ -88,6 +92,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -98,6 +103,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -115,6 +121,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -125,6 +132,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -136,6 +144,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -147,6 +156,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -157,6 +167,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -175,6 +186,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -185,6 +197,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -197,6 +210,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -207,6 +221,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -218,6 +233,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -228,6 +244,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -239,6 +256,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -249,6 +267,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -259,6 +278,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -269,6 +289,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -279,6 +300,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -289,6 +311,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -299,6 +322,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -309,6 +333,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -319,6 +344,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -329,6 +355,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -339,6 +366,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -349,6 +377,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
                 }
@@ -367,6 +396,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -385,6 +415,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
@@ -395,6 +426,7 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
 
