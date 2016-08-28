@@ -3,6 +3,8 @@ package com.seminnova.mvpar.monumentosvalledupar;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +18,7 @@ import com.daimajia.slider.library.Tricks.ViewPagerEx;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 
 public class DescMonumentoFragment extends Fragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
@@ -23,6 +26,7 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
     private SliderLayout mDemoSlider;
     String titulo;
     ArrayList<Integer> lista = new ArrayList<Integer>();
+    private LinearLayoutManager lLayout;
 
     public DescMonumentoFragment() {
         // Required empty public constructor
@@ -70,6 +74,31 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
         mDemoSlider.setCustomAnimation(new DescriptionAnimation());
         mDemoSlider.setDuration(4000);
         mDemoSlider.addOnPageChangeListener(this);//
+
+        /*
+        *
+        *
+        *
+        */
+
+        //lLayout = new LinearLayoutManager(getParent());
+        lLayout = new LinearLayoutManager(getActivity().getParent());
+
+        List<ItemObjectDescMon> rowListItem = new ArrayList<ItemObjectDescMon>();
+        rowListItem.add(new ItemObjectDescMon("Nombre","Sierra Nevada: Montaña Sagrada",""));
+        rowListItem.add(new ItemObjectDescMon("Autor", "Gabriel Beltrán",""));
+        rowListItem.add(new ItemObjectDescMon("Medidas", "4.5 mts Alto\n6.0 mts Largo\n4.5 mts Ancho",""));
+        rowListItem.add(new ItemObjectDescMon("Ubicación","Plazoleta de Banderas Gobernación del Cesar",""));
+        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstractos",""));
+        rowListItem.add(new ItemObjectDescMon("Técnica","Acero 304 ensamblado, soldado y bruñido. Ensamble y armado en el sitio determinado",""));
+        rowListItem.add(new ItemObjectDescMon("Reseña","","Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región."));
+
+        RecyclerView rView = (RecyclerView) view.findViewById(R.id.recycler_view_descmon);
+        rView.setLayoutManager(lLayout);
+
+        RecyclerViewAdapterDescMon rcAdapter = new RecyclerViewAdapterDescMon(view.getContext(), rowListItem);
+        rView.setAdapter(rcAdapter);
+
 
         return view;
 
