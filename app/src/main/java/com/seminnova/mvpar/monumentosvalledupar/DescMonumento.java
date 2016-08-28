@@ -39,12 +39,13 @@ public class DescMonumento {
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         break;
                     case 1:
 
                         titulo = "Fortaleza Valor y Justicia";
-
+                        lista.add(R.drawable.slider1);
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.content_frame2, fragment)
@@ -403,5 +404,7 @@ public class DescMonumento {
         }
 
     }
+
+
 
 }

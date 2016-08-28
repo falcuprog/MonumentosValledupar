@@ -54,6 +54,7 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
         escaner.stopCamera();
     }
 
+
     @Override
     public void onResume() {
         super.onResume();
@@ -81,5 +82,7 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
         });
 
     }
+
+
 
 }

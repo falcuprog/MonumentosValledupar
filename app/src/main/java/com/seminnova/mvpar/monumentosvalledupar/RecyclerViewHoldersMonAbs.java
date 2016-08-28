@@ -31,7 +31,6 @@ public class RecyclerViewHoldersMonAbs extends RecyclerView.ViewHolder implement
     public void onClick(View view) {
         //Toast.makeText(view.getContext(), "Monumento " + getPosition(), Toast.LENGTH_SHORT).show();
 
-
         categoria = RecyclerViewHolders.categoria;
 
         monumento = getPosition();

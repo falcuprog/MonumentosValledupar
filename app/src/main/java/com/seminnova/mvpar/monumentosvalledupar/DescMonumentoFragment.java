@@ -14,14 +14,13 @@ import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
-import com.daimajia.slider.library.Tricks.ViewPagerEx;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 
-public class DescMonumentoFragment extends Fragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
+public class DescMonumentoFragment extends Fragment {
 
     private SliderLayout mDemoSlider;
     String titulo;
@@ -59,8 +58,7 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
                     .description(name)
                     //.image(url_maps.get(name))
                     .image(url_maps.get(name))
-                    .setScaleType(BaseSliderView.ScaleType.Fit)
-                    .setOnSliderClickListener(this);
+                    .setScaleType(BaseSliderView.ScaleType.Fit);
 
             //add your extra information
             textSliderView.bundle(new Bundle());
@@ -73,7 +71,6 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         mDemoSlider.setCustomAnimation(new DescriptionAnimation());
         mDemoSlider.setDuration(4000);
-        mDemoSlider.addOnPageChangeListener(this);//
 
         /*
         *
@@ -91,7 +88,7 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
         rowListItem.add(new ItemObjectDescMon("Ubicación","Plazoleta de Banderas Gobernación del Cesar",""));
         rowListItem.add(new ItemObjectDescMon("Categoría", "Abstractos",""));
         rowListItem.add(new ItemObjectDescMon("Técnica","Acero 304 ensamblado, soldado y bruñido. Ensamble y armado en el sitio determinado",""));
-        rowListItem.add(new ItemObjectDescMon("Reseña","","Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región."));
+        rowListItem.add(new ItemObjectDescMon("Reseña","","Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región.Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región."));
 
         RecyclerView rView = (RecyclerView) view.findViewById(R.id.recycler_view_descmon);
         rView.setLayoutManager(lLayout);
@@ -99,18 +96,21 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
         RecyclerViewAdapterDescMon rcAdapter = new RecyclerViewAdapterDescMon(view.getContext(), rowListItem);
         rView.setAdapter(rcAdapter);
 
+        /*
+        *
+        * */
 
         return view;
 
     }
 
-    @Override
+    /*@Override
     public void onStop() {
         mDemoSlider.stopAutoCycle();
         super.onStop();
-    }
+    }*/
 
-    @Override
+    /*@Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
     }
@@ -128,7 +128,7 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
     @Override
     public void onSliderClick(BaseSliderView slider) {
 
-    }
+    }*/
 
     @Override
     public void onResume() {
@@ -144,7 +144,7 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
                     //Toast.makeText(getActivity(), "Back press", Toast.LENGTH_SHORT).show();
 
                     Fragment fragment = new MonAbsFragment();
-                    FragmentManager fragMana = getFragmentManager();
+                    FragmentManager fragMana = getActivity().getSupportFragmentManager();
                     fragMana.beginTransaction()
                             .remove(DescMonumentoFragment.this)
                             .replace(R.id.content_frame2, fragment)
@@ -157,4 +157,5 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
         });
 
     }
+
 }

@@ -72,9 +72,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .replace(R.id.content_frame2, fragment)
                 .commit();*/
 
+
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_frame2, new InicioFragment())
                 .commit();
+
 
     }
 
