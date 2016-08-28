@@ -2,6 +2,7 @@ package com.seminnova.mvpar.monumentosvalledupar;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -15,9 +16,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
@@ -192,32 +194,31 @@ class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourR
     @Override
     public void onBindViewHolder(YourRecyclerViewHolder yourRecyclerViewHolder, int i) {
 
-            yourRecyclerViewHolder.webView.setWebViewClient(new Callback());
+            /* ESTE ERAyourRecyclerViewHolder.webView.setWebViewClient(new Callback());
             WebSettings webSettings = yourRecyclerViewHolder.webView.getSettings();
             webSettings.setBuiltInZoomControls(true);
             webSettings.setJavaScriptEnabled(true);
             yourRecyclerViewHolder.webView.clearHistory();
             yourRecyclerViewHolder.webView.clearFormData();
             yourRecyclerViewHolder.webView.clearCache(true);
-            yourRecyclerViewHolder.webView.loadUrl("http://elpilon.com.co/la-restauracion-del-coliseo-julio-monsalvo");
+            yourRecyclerViewHolder.webView.loadUrl("http://elpilon.com.co/la-restauracion-del-coliseo-julio-monsalvo"); ESTE ERA*/
 
-        /*}else if (YourPagerAdapter.pos == 1) {
+        final ProgressBar progress = (ProgressBar) yourRecyclerViewHolder.itemView.findViewById(R.id.pb);
 
-            yourRecyclerViewHolder.webView.setWebViewClient(new Callback());
-            WebSettings webSettings = yourRecyclerViewHolder.webView.getSettings();
-            webSettings.setBuiltInZoomControls(true);
-            webSettings.setJavaScriptEnabled(true);
-            yourRecyclerViewHolder.webView.clearCache(true);
-            yourRecyclerViewHolder.webView.loadUrl("http://www.youtube.com/");
-        } else if(YourPagerAdapter.pos == 2) {
+        final RelativeLayout relativeLayout = (RelativeLayout) yourRecyclerViewHolder.itemView.findViewById(R.id.relative);
 
-            yourRecyclerViewHolder.webView.setWebViewClient(new Callback());
-            WebSettings webSettings = yourRecyclerViewHolder.webView.getSettings();
-            webSettings.setBuiltInZoomControls(true);
-            webSettings.setJavaScriptEnabled(true);
-            yourRecyclerViewHolder.webView.clearCache(true);
-            yourRecyclerViewHolder.webView.loadUrl("http://www.elpilon.com.co/");
-        }*/
+        progress.getIndeterminateDrawable().setColorFilter(
+                Color.RED, android.graphics.PorterDuff.Mode.SRC_IN);
+
+        //WebView webView = (WebView) yourRecyclerViewHolder.itemView.findViewById(R.id.webview);
+        yourRecyclerViewHolder.webView.loadUrl("http://www.milanadictos.net");
+        yourRecyclerViewHolder.webView.setWebViewClient(new WebViewClient(){
+
+            @Override
+            public void onPageFinished(WebView view, String url){
+                relativeLayout.removeView(progress);
+            }
+        });
 
     }
 
