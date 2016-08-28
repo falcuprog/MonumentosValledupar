@@ -118,7 +118,7 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
                     FragmentManager fragMana = getFragmentManager();
                     fragMana.beginTransaction()
                             .remove(DescMonumentoFragment.this)
-                            .replace(R.id.content_frame, fragment)
+                            .replace(R.id.content_frame2, fragment)
                             .commit();
 
                     return true;
