@@ -192,16 +192,15 @@ class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourR
     @Override
     public void onBindViewHolder(YourRecyclerViewHolder yourRecyclerViewHolder, int i) {
 
-
-        if (YourPagerAdapter.pos == 0) {
-
             yourRecyclerViewHolder.webView.setWebViewClient(new Callback());
             WebSettings webSettings = yourRecyclerViewHolder.webView.getSettings();
             webSettings.setBuiltInZoomControls(true);
             webSettings.setJavaScriptEnabled(true);
+            yourRecyclerViewHolder.webView.clearHistory();
+            yourRecyclerViewHolder.webView.clearFormData();
             yourRecyclerViewHolder.webView.clearCache(true);
             yourRecyclerViewHolder.webView.loadUrl("http://elpilon.com.co/la-restauracion-del-coliseo-julio-monsalvo");
-        }
+
         /*}else if (YourPagerAdapter.pos == 1) {
 
             yourRecyclerViewHolder.webView.setWebViewClient(new Callback());

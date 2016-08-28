@@ -46,7 +46,7 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
             url_maps.put(titulo + " "+ (i+1), lista.get(i));
         }
 
-        mDemoSlider.stopAutoCycle();
+        //mDemoSlider.stopAutoCycle();
 
         for(String name : url_maps.keySet()){
             TextSliderView textSliderView = new TextSliderView(view.getContext());//
