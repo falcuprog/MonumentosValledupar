@@ -28,10 +28,6 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
 
         View view = inflater.inflate(R.layout.fragment_codigoqr, container, false);
 
-        //((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Búsqueda QR");
-
-
-
         escaner = new ZXingScannerView(view.getContext());
 
         escaner.setResultHandler(this);
