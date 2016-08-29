@@ -220,7 +220,7 @@ class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourR
                 Color.RED, android.graphics.PorterDuff.Mode.SRC_IN);
 
         //WebView webView = (WebView) yourRecyclerViewHolder.itemView.findViewById(R.id.webview);
-        yourRecyclerViewHolder.webView.loadUrl("http://www.milanadictos.net");
+        yourRecyclerViewHolder.webView.loadUrl("http://elpilon.com.co/la-restauracion-del-coliseo-julio-monsalvo");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
