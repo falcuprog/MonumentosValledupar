@@ -1,8 +1,9 @@
 package com.seminnova.mvpar.monumentosvalledupar;
 
-
 import android.content.Context;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -39,6 +42,9 @@ public class InicioFragment extends Fragment implements BaseSliderView.OnSliderC
     private YourPagerAdapter mAdapter;
     private TabLayout mTabLayout;
 
+    public static Context context;
+    public static FragmentManager fragmentManager;
+
     public InicioFragment() {
         // Required empty public constructor
     }
@@ -53,6 +59,9 @@ public class InicioFragment extends Fragment implements BaseSliderView.OnSliderC
         * */
 
         View view = inflater.inflate(R.layout.fragment_inicio, container, false);
+
+        context = getActivity().getApplicationContext();
+        fragmentManager = getFragmentManager();
 
         Toolbar mToolbar = (Toolbar) view.findViewById(R.id.app_bar);
 
@@ -149,7 +158,6 @@ public class InicioFragment extends Fragment implements BaseSliderView.OnSliderC
 
 }
 
-
 class YourPagerAdapter extends FragmentStatePagerAdapter {
 
     public YourPagerAdapter(FragmentManager fm) {
@@ -192,7 +200,7 @@ class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourR
     }
 
     @Override
-    public void onBindViewHolder(YourRecyclerViewHolder yourRecyclerViewHolder, int i) {
+    public void onBindViewHolder(final YourRecyclerViewHolder yourRecyclerViewHolder, int i) {
 
             /* ESTE ERAyourRecyclerViewHolder.webView.setWebViewClient(new Callback());
             WebSettings webSettings = yourRecyclerViewHolder.webView.getSettings();
@@ -204,22 +212,63 @@ class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourR
             yourRecyclerViewHolder.webView.loadUrl("http://elpilon.com.co/la-restauracion-del-coliseo-julio-monsalvo"); ESTE ERA*/
 
         final ProgressBar progress = (ProgressBar) yourRecyclerViewHolder.itemView.findViewById(R.id.pb);
-
         final RelativeLayout relativeLayout = (RelativeLayout) yourRecyclerViewHolder.itemView.findViewById(R.id.relative);
+        final LinearLayout linearLayout = (LinearLayout) yourRecyclerViewHolder.itemView.findViewById(R.id.layout_error);
+        final Button button = (Button) yourRecyclerViewHolder.itemView.findViewById(R.id.btnRecargar);
 
         progress.getIndeterminateDrawable().setColorFilter(
                 Color.RED, android.graphics.PorterDuff.Mode.SRC_IN);
 
         //WebView webView = (WebView) yourRecyclerViewHolder.itemView.findViewById(R.id.webview);
         yourRecyclerViewHolder.webView.loadUrl("http://www.milanadictos.net");
-        yourRecyclerViewHolder.webView.setWebViewClient(new WebViewClient(){
 
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPageFinished(WebView view, String url){
-                relativeLayout.removeView(progress);
+            public void onClick(View view) {
+                InicioFragment.fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame2, new InicioFragment())
+                        .commit();
             }
         });
 
+        yourRecyclerViewHolder.webView.setWebViewClient(new WebViewClient(){
+
+            @Override
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                super.onReceivedError(view, errorCode, description, failingUrl);
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url){
+
+                boolean hola = isOnline();
+
+                if (hola) {
+                    relativeLayout.removeView(progress);
+                } else {
+                    relativeLayout.removeView(progress);
+                    linearLayout.setVisibility(View.VISIBLE);
+                    button.setVisibility(View.VISIBLE);
+                    relativeLayout.removeView(yourRecyclerViewHolder.webView);
+
+                }
+
+            }
+        });
+
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) InicioFragment.context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo i = cm.getActiveNetworkInfo();
+        if ((i == null) || (!i.isConnected())) {
+            Toast.makeText(InicioFragment.context,
+                    "NO ESTÁS CONECTADO A INTERNET", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 
     private class Callback extends WebViewClient {
@@ -240,7 +289,7 @@ class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourR
 
         public YourRecyclerViewHolder(View itemView) {
             super(itemView);
-            webView = (WebView) itemView.findViewById(R.id.WebView01);
+            webView = (WebView) itemView.findViewById(R.id.webview);
         }
     }
 }
