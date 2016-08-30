@@ -55,7 +55,7 @@ public class DescMonumentoFragment extends Fragment {
         HashMap<String,Integer> url_maps = new HashMap<String, Integer>();
         
         for (int i = 0; i < lista.size(); i++) {
-            url_maps.put(titulo + " "+ (i+1), lista.get(i));
+            url_maps.put(titulo + " ", lista.get(i));
         }
 
         //mDemoSlider.stopAutoCycle();
@@ -80,6 +80,7 @@ public class DescMonumentoFragment extends Fragment {
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         mDemoSlider.setCustomAnimation(new DescriptionAnimation());
         mDemoSlider.setDuration(4000);
+
 
         /*
         *

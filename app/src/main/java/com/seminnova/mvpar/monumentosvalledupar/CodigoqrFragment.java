@@ -79,7 +79,7 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
                 descMonumento.mostrarDescripcion();
                 break;
 
-            case "monumentolunavallenata":
+            /*case "monumentolunavallenata":
                 descMonumento = new DescMonumento(0,6,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
@@ -107,94 +107,94 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
             case "monumentoelparquedelasmadre":
                 descMonumento = new DescMonumento(1,4,getFragmentManager());
                 descMonumento.mostrarDescripcion();
-                break;
+                break;*/
 
             case "monumentopedazodeacordeon":
-                descMonumento = new DescMonumento(2,0,getFragmentManager());
+                descMonumento = new DescMonumento(1,0,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentoconjuntovallenato":
-                descMonumento = new DescMonumento(2,1,getFragmentManager());
+                descMonumento = new DescMonumento(1,1,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentolospoporos":
-                descMonumento = new DescMonumento(2,2,getFragmentManager());
+                descMonumento = new DescMonumento(1,2,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentomariamulata":
-                descMonumento = new DescMonumento(2,3,getFragmentManager());
+                descMonumento = new DescMonumento(1,3,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentolasirena":
-                descMonumento = new DescMonumento(2,4,getFragmentManager());
+                descMonumento = new DescMonumento(1,4,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentolaguacharaca":
-                descMonumento = new DescMonumento(2,5,getFragmentManager());
+                descMonumento = new DescMonumento(1,5,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentodosguitarras":
-                descMonumento = new DescMonumento(2,6,getFragmentManager());
+                descMonumento = new DescMonumento(1,6,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentopeleadegallos":
-                descMonumento = new DescMonumento(2,7,getFragmentManager());
+                descMonumento = new DescMonumento(1,7,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentocaracoldecolores":
-                descMonumento = new DescMonumento(2,8,getFragmentManager());
+                descMonumento = new DescMonumento(1,8,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentotambordedosparches":
-                descMonumento = new DescMonumento(2,9,getFragmentManager());
+                descMonumento = new DescMonumento(1,9,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentogaitas":
-                descMonumento = new DescMonumento(2,10,getFragmentManager());
+                descMonumento = new DescMonumento(1,10,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentomaracas":
-                descMonumento = new DescMonumento(2,11,getFragmentManager());
+                descMonumento = new DescMonumento(1,11,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentoacordeon":
-                descMonumento = new DescMonumento(2,12,getFragmentManager());
+                descMonumento = new DescMonumento(1,12,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentolasguitarras":
-                descMonumento = new DescMonumento(2,13,getFragmentManager());
+                descMonumento = new DescMonumento(1,13,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentocaja":
-                descMonumento = new DescMonumento(2,14,getFragmentManager());
+                descMonumento = new DescMonumento(1,14,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentopuyaymerengue":
-                descMonumento = new DescMonumento(2,15,getFragmentManager());
+                descMonumento = new DescMonumento(1,15,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
             case "monumentopaseoyson":
-                descMonumento = new DescMonumento(2,16,getFragmentManager());
+                descMonumento = new DescMonumento(1,16,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
-            case "monumentoskate":
+            /*case "monumentoskate":
                 descMonumento = new DescMonumento(3,0,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
@@ -207,7 +207,7 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
             case "monumentosantoeccehomo":
                 descMonumento = new DescMonumento(4,1,getFragmentManager());
                 descMonumento.mostrarDescripcion();
-                break;
+                break;*/
 
             default:
                 Toast.makeText(this.getActivity(), "MONUMENTO NO IDENTIFICADO", Toast.LENGTH_SHORT).show();
