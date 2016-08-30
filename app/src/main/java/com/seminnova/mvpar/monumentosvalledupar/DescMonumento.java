@@ -4,14 +4,18 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DescMonumento {
 
-    public static int categoria, monumento;
     Fragment fragment;
     FragmentManager fragmentManager;
+
+    public static int categoria, monumento;
     public static ArrayList<Integer> lista;
     public static String titulo;
+
+    public List<ItemObjectDescMon> rowListItem = new ArrayList<ItemObjectDescMon>();
 
     public DescMonumento(int categoria, int monumento, FragmentManager fragmentManager) {
 
@@ -23,6 +27,8 @@ public class DescMonumento {
 
     public void mostrarDescripcion() {
 
+        DescMonumentoFragment descMonumentoFragment;
+
         switch (categoria) {
 
             case 0:
@@ -31,24 +37,43 @@ public class DescMonumento {
 
                     case 0:
 
+                        rowListItem.add(new ItemObjectDescMon("Nombre","Sierra Nevada: Montaña Sagrada1",""));
+                        rowListItem.add(new ItemObjectDescMon("Autor", "Gabriel Beltrán1",""));
+                        rowListItem.add(new ItemObjectDescMon("Medidas", "4.5 mts Alto\n6.0 mts Largo\n4.5 mts Ancho1",""));
+                        rowListItem.add(new ItemObjectDescMon("Ubicación","Plazoleta de Banderas Gobernación del Cesar1",""));
+                        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstractos1",""));
+                        rowListItem.add(new ItemObjectDescMon("Técnica","1Acero 304 ensamblado, soldado y bruñido. Ensamble y armado en el sitio determinado",""));
+                        rowListItem.add(new ItemObjectDescMon("Reseña","","1Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región.Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región."));
+
                         titulo = "Victoria";
                         lista.add(R.drawable.slider1);
                         lista.add(R.drawable.slider2);
                         lista.add(R.drawable.slider3);
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
                     case 1:
 
+                        rowListItem.add(new ItemObjectDescMon("Nombre","2Sierra Nevada: Montaña Sagrada",""));
+                        rowListItem.add(new ItemObjectDescMon("Autor", "2Gabriel Beltrán",""));
+                        rowListItem.add(new ItemObjectDescMon("Medidas", "24.5 mts Alto\n6.0 mts Largo\n4.5 mts Ancho",""));
+                        rowListItem.add(new ItemObjectDescMon("Ubicación","2Plazoleta de Banderas Gobernación del Cesar",""));
+                        rowListItem.add(new ItemObjectDescMon("Categoría", "2Abstractos",""));
+                        rowListItem.add(new ItemObjectDescMon("Técnica","2Acero 304 ensamblado, soldado y bruñido. Ensamble y armado en el sitio determinado",""));
+                        rowListItem.add(new ItemObjectDescMon("Reseña","","2Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región.Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región."));
+
                         titulo = "Fortaleza Valor y Justicia";
                         lista.add(R.drawable.slider1);
-                        fragment = new DescMonumentoFragment();
+
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -58,9 +83,10 @@ public class DescMonumento {
                         lista.add(R.drawable.slider1);
                         lista.add(R.drawable.slider2);
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -68,9 +94,10 @@ public class DescMonumento {
 
                         titulo = "Sierra Nevada, Montaña Sagrada";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -79,9 +106,10 @@ public class DescMonumento {
                         titulo = "El Obelisco";
                         lista.add(R.drawable.slider1);
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -89,9 +117,10 @@ public class DescMonumento {
 
                         titulo = "Revolución en Marcha";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -100,9 +129,10 @@ public class DescMonumento {
 
                         titulo = "Luna Vallenata";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -118,9 +148,10 @@ public class DescMonumento {
 
                         titulo = "Hernando de Santana";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -129,9 +160,10 @@ public class DescMonumento {
 
                         titulo = "Pilonera Mayor";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -141,9 +173,10 @@ public class DescMonumento {
                         titulo = "Cacique Upar";
                         lista.add(R.drawable.slider1);
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -153,9 +186,10 @@ public class DescMonumento {
                         titulo = "El Viajero";
                         lista.add(R.drawable.slider1);
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -164,9 +198,10 @@ public class DescMonumento {
 
                         titulo = "Parque de las Madres";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -183,9 +218,10 @@ public class DescMonumento {
                         titulo = "Pedazo de Acordeón";
                         lista.add(R.drawable.slider1);
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -194,9 +230,10 @@ public class DescMonumento {
 
                         titulo = "Conjunto Vallenato";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -207,9 +244,10 @@ public class DescMonumento {
                         lista.add(R.drawable.slider1);
                         lista.add(R.drawable.slider2);
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -218,9 +256,10 @@ public class DescMonumento {
 
                         titulo = "María Mulata";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -230,9 +269,10 @@ public class DescMonumento {
                         titulo = "La sirena";
                         lista.add(R.drawable.slider1);
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -241,9 +281,10 @@ public class DescMonumento {
 
                         titulo = "Guacharaca";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -253,9 +294,10 @@ public class DescMonumento {
                         titulo = "Las Dos Guitarras";
                         lista.add(R.drawable.slider1);
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -264,9 +306,10 @@ public class DescMonumento {
 
                         titulo = "Pelea de Gallos";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -275,9 +318,10 @@ public class DescMonumento {
 
                         titulo = "Caracol de Colores";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -286,9 +330,10 @@ public class DescMonumento {
 
                         titulo = "Tambor de Dos Parches";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -297,9 +342,10 @@ public class DescMonumento {
 
                         titulo = "Gaitas";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -308,9 +354,10 @@ public class DescMonumento {
 
                         titulo = "Maraca";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -319,9 +366,10 @@ public class DescMonumento {
 
                         titulo = "Acordeón";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -330,9 +378,10 @@ public class DescMonumento {
 
                         titulo = "Monumento a las Guitarras";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -341,9 +390,10 @@ public class DescMonumento {
 
                         titulo = "Caja";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -352,9 +402,10 @@ public class DescMonumento {
 
                         titulo = "Puya y Merengue";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -363,9 +414,10 @@ public class DescMonumento {
 
                         titulo = "Paseo y Son";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -382,9 +434,10 @@ public class DescMonumento {
                         lista.add(R.drawable.slider1);
                         lista.add(R.drawable.slider2);
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -401,9 +454,10 @@ public class DescMonumento {
                         titulo = "Juan Jugan";
                         lista.add(R.drawable.slider1);
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -412,9 +466,10 @@ public class DescMonumento {
 
                         titulo = "Santo Ecce Homo";
 
-                        fragment = new DescMonumentoFragment();
+                        descMonumentoFragment = new DescMonumentoFragment();
+                        descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
+                                .replace(R.id.content_frame2, descMonumentoFragment)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -425,7 +480,5 @@ public class DescMonumento {
         }
 
     }
-
-
 
 }

@@ -208,6 +208,7 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
                 descMonumento = new DescMonumento(4,1,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
+
             default:
                 Toast.makeText(this.getActivity(), "MONUMENTO NO IDENTIFICADO", Toast.LENGTH_SHORT).show();
                 break;
