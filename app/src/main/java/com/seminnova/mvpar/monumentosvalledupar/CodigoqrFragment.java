@@ -40,7 +40,180 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
     public void handleResult(Result rawResult) {
         String codigo;
         codigo = rawResult.getText();
-        Toast.makeText(this.getActivity(), codigo, Toast.LENGTH_SHORT).show();
+
+        //Toast.makeText(this.getActivity(), codigo, Toast.LENGTH_SHORT).show();
+
+        DescMonumento descMonumento;
+
+        switch (codigo){
+
+            case "monumentolavictoria":
+
+                descMonumento = new DescMonumento(0,0,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentofortalezavaloryjusticia":
+
+                descMonumento = new DescMonumento(0,1,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentolectordeltiempo":
+                descMonumento = new DescMonumento(0,2,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentosierranevada":
+                descMonumento = new DescMonumento(0,3,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentoelobelisco":
+                descMonumento = new DescMonumento(0,4,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentorevolucionenmarcha":
+                descMonumento = new DescMonumento(0, 5, getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentolunavallenata":
+                descMonumento = new DescMonumento(0,6,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentohernandodesantana":
+                descMonumento = new DescMonumento(1,0,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentolapiloneramayor":
+                descMonumento = new DescMonumento(1,1,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentocaciqueupar":
+                descMonumento = new DescMonumento(1,2,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentoelviajero":
+                descMonumento = new DescMonumento(1,3,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentoelparquedelasmadre":
+                descMonumento = new DescMonumento(1,4,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentopedazodeacordeon":
+                descMonumento = new DescMonumento(2,0,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentoconjuntovallenato":
+                descMonumento = new DescMonumento(2,1,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentolospoporos":
+                descMonumento = new DescMonumento(2,2,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentomariamulata":
+                descMonumento = new DescMonumento(2,3,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentolasirena":
+                descMonumento = new DescMonumento(2,4,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentolaguacharaca":
+                descMonumento = new DescMonumento(2,5,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentodosguitarras":
+                descMonumento = new DescMonumento(2,6,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentopeleadegallos":
+                descMonumento = new DescMonumento(2,7,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentocaracoldecolores":
+                descMonumento = new DescMonumento(2,8,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentotambordedosparches":
+                descMonumento = new DescMonumento(2,9,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentogaitas":
+                descMonumento = new DescMonumento(2,10,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentomaracas":
+                descMonumento = new DescMonumento(2,11,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentoacordeon":
+                descMonumento = new DescMonumento(2,12,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentolasguitarras":
+                descMonumento = new DescMonumento(2,13,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentocaja":
+                descMonumento = new DescMonumento(2,14,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentopuyaymerengue":
+                descMonumento = new DescMonumento(2,15,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentopaseoyson":
+                descMonumento = new DescMonumento(2,16,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentoskate":
+                descMonumento = new DescMonumento(3,0,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentojuanajugan":
+                descMonumento = new DescMonumento(4,0,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+
+            case "monumentosantoeccehomo":
+                descMonumento = new DescMonumento(4,1,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;
+            default:
+                Toast.makeText(this.getActivity(), "MONUMENTO NO IDENTIFICADO", Toast.LENGTH_SHORT).show();
+                break;
+
+        }
+
         escaner.resumeCameraPreview(this);
     }
 

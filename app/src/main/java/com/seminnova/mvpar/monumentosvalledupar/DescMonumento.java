@@ -295,7 +295,7 @@ public class DescMonumento {
 
                     case 10:
 
-                        titulo = "Tambor Alegre";
+                        titulo = "Gaitas";
 
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
@@ -306,7 +306,7 @@ public class DescMonumento {
 
                     case 11:
 
-                        titulo = "Gaitas";
+                        titulo = "Maraca";
 
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
@@ -317,7 +317,7 @@ public class DescMonumento {
 
                     case 12:
 
-                        titulo = "Maraca";
+                        titulo = "Acordeón";
 
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
@@ -328,7 +328,7 @@ public class DescMonumento {
 
                     case 13:
 
-                        titulo = "Acordeón";
+                        titulo = "Monumento a las Guitarras";
 
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
@@ -339,7 +339,7 @@ public class DescMonumento {
 
                     case 14:
 
-                        titulo = "Monumento a las Guitarras";
+                        titulo = "Caja";
 
                         fragment = new DescMonumentoFragment();
                         fragmentManager.beginTransaction()
@@ -350,17 +350,6 @@ public class DescMonumento {
 
                     case 15:
 
-                        titulo = "Caja";
-
-                        fragment = new DescMonumentoFragment();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, fragment)
-                                .addToBackStack(null)
-                                .commit();
-                        break;
-
-                    case 16:
-
                         titulo = "Puya y Merengue";
 
                         fragment = new DescMonumentoFragment();
@@ -370,7 +359,7 @@ public class DescMonumento {
                                 .commit();
                         break;
 
-                    case 17:
+                    case 16:
 
                         titulo = "Paseo y Son";
 
