@@ -54,19 +54,7 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
 
                 break;
             case 1: //Toast.makeText(view.getContext(), "Monumentos Arquitectónicos", Toast.LENGTH_SHORT).show();
-
                 listaMon = getAllItemListCat1();
-                titulo = "Biográficos e Históricos";
-                categoria = 1;
-
-                fragment = new MonAbsFragment();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.content_frame2, fragment)
-                        .commit();
-                break;
-            case 2: //Toast.makeText(view.getContext(), "Monumentos Biográficos", Toast.LENGTH_SHORT).show();
-
-                listaMon = getAllItemListCat2();
                 titulo = "Culturales y Folclóricos";
                 categoria = 2;
 
@@ -75,6 +63,19 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
                         .replace(R.id.content_frame2, fragment)
                         .commit();
                 break;
+
+            case 2: //Toast.makeText(view.getContext(), "Monumentos Biográficos", Toast.LENGTH_SHORT).show();
+
+                listaMon = getAllItemListCat2();
+                titulo = "Biográficos e Históricos";
+                categoria = 1;
+
+                fragment = new MonAbsFragment();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame2, fragment)
+                        .commit();
+                break;
+
             case 3: //Toast.makeText(view.getContext(), "Monumentos Deportivos", Toast.LENGTH_SHORT).show();
 
                 listaMon = getAllItemListCat3();
@@ -101,29 +102,16 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
 
     }
 
-    private List<ItemObjectMonAbs> getAllItemListCat0(){
+    private List<ItemObjectMonAbs> getAllItemListCat0() {
 
         List<ItemObjectMonAbs> allItems = new ArrayList<ItemObjectMonAbs>();
-        allItems.add(new ItemObjectMonAbs("Victoria", "Vildansvagen 19, Lund Sweden", R.drawable.slider1_copia));
-        allItems.add(new ItemObjectMonAbs("Fortaleza Valor y Justicia", "3 Villa Crescent London, UK", R.drawable.slider2_copia));
-        allItems.add(new ItemObjectMonAbs("Lector del Tiempo", "Victoria Island Lagos, Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Sierra Nevada: Montaña Sagrada", "New Heaven Enugu, Nigeria", R.drawable.slider4_copia));
-        allItems.add(new ItemObjectMonAbs("El Obelisco", "Italion Gata, Padova, Italy", R.drawable.slider5_copia));
-        allItems.add(new ItemObjectMonAbs("Revolución en Marcha", "San Fransisco, United States", R.drawable.slider6_copia));
-        allItems.add(new ItemObjectMonAbs("Luna Vallenata", "Queens Crescent, New Zealand", R.drawable.slider7_copia));
-
-        return allItems;
-    }
-
-    private List<ItemObjectMonAbs> getAllItemListCat1(){
-
-        List<ItemObjectMonAbs> allItems = new ArrayList<ItemObjectMonAbs>();
-
-        allItems.add(new ItemObjectMonAbs("Hernando de Santana", "3 Villa Crescent London, UK", R.drawable.slider2_copia));
-        allItems.add(new ItemObjectMonAbs("Pilonera Mayor", "New Heaven Enugu, Nigeria", R.drawable.slider4_copia));
-        allItems.add(new ItemObjectMonAbs("Cacique Upar", "Italion Gata, Padova, Italy", R.drawable.slider5_copia));
-        allItems.add(new ItemObjectMonAbs("El Viajero", "Queens Crescent, New Zealand", R.drawable.slider7_copia));
-        allItems.add(new ItemObjectMonAbs("Parque de las Madres", "Ivory Lane, Abuja, Nigeria", R.drawable.slider1_copia));
+        allItems.add(new ItemObjectMonAbs("Victoria", "", R.drawable.slider1_copia));
+        allItems.add(new ItemObjectMonAbs("Fortaleza Valor y Justicia", "", R.drawable.slider2_copia));
+        allItems.add(new ItemObjectMonAbs("Lector del Tiempo", "", R.drawable.slider3_copia));
+        allItems.add(new ItemObjectMonAbs("Sierra Nevada: Montaña Sagrada", "", R.drawable.slider4_copia));
+        allItems.add(new ItemObjectMonAbs("El Obelisco", "", R.drawable.slider5_copia));
+        allItems.add(new ItemObjectMonAbs("Revolución en Marcha", "", R.drawable.slider6_copia));
+        allItems.add(new ItemObjectMonAbs("Luna Vallenata", "", R.drawable.slider7_copia));
 
         return allItems;
     }
@@ -131,24 +119,37 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
     private List<ItemObjectMonAbs> getAllItemListCat2(){
 
         List<ItemObjectMonAbs> allItems = new ArrayList<ItemObjectMonAbs>();
-        allItems.add(new ItemObjectMonAbs("Pedazo de Acordeón", "Vildansvagen 19, Lund Sweden", R.drawable.slider1_copia));
-        allItems.add(new ItemObjectMonAbs("Conjunto Vallenato", "3 Villa Crescent London, UK", R.drawable.slider2_copia));
-        allItems.add(new ItemObjectMonAbs("Los Poporos", "Victoria Island Lagos, Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("María Mulata", "New Heaven Enugu, Nigeria", R.drawable.slider4_copia));
-        allItems.add(new ItemObjectMonAbs("La Sirena", "Italion Gata, Padova, Italy", R.drawable.slider5_copia));
-        allItems.add(new ItemObjectMonAbs("Guacharaca", "San Fransisco, United States", R.drawable.slider6_copia));
-        allItems.add(new ItemObjectMonAbs("Las Dos Guitarras", "Queens Crescent, New Zealand", R.drawable.slider7_copia));
-        allItems.add(new ItemObjectMonAbs("Pelea de Gallos", "Ivory Lane, Abuja, Nigeria", R.drawable.slider1_copia));
-        allItems.add(new ItemObjectMonAbs("Caracol de Colores", "Johnson Road, Port Harcourt, Nigeria", R.drawable.slider2_copia));
-        allItems.add(new ItemObjectMonAbs("Tambor de los Parches", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Tambor Alegre", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Gaitas", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Maraca", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Acordeón", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Monumento a las Guitarras", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Caja", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Puya y Merengue", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Paseo y Son", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
+
+        allItems.add(new ItemObjectMonAbs("Hernando de Santana", "", R.drawable.slider2_copia));
+        allItems.add(new ItemObjectMonAbs("Pilonera Mayor", "", R.drawable.slider4_copia));
+        allItems.add(new ItemObjectMonAbs("Cacique Upar", "", R.drawable.slider5_copia));
+        allItems.add(new ItemObjectMonAbs("El Viajero", "", R.drawable.slider7_copia));
+        allItems.add(new ItemObjectMonAbs("Parque de las Madres", "", R.drawable.slider1_copia));
+
+        return allItems;
+    }
+
+    private List<ItemObjectMonAbs> getAllItemListCat1(){
+
+        List<ItemObjectMonAbs> allItems = new ArrayList<ItemObjectMonAbs>();
+        allItems.add(new ItemObjectMonAbs("Pedazo de Acordeón", "", R.drawable.slider1_copia));
+        allItems.add(new ItemObjectMonAbs("Conjunto Vallenato", "", R.drawable.slider2_copia));
+        allItems.add(new ItemObjectMonAbs("Los Poporos", "", R.drawable.slider3_copia));
+        allItems.add(new ItemObjectMonAbs("María Mulata", "", R.drawable.slider4_copia));
+        allItems.add(new ItemObjectMonAbs("La Sirena", "", R.drawable.slider5_copia));
+        allItems.add(new ItemObjectMonAbs("Guacharaca", "", R.drawable.slider6_copia));
+        allItems.add(new ItemObjectMonAbs("Las Dos Guitarras", "", R.drawable.slider7_copia));
+        allItems.add(new ItemObjectMonAbs("Pelea de Gallos", "", R.drawable.slider1_copia));
+        allItems.add(new ItemObjectMonAbs("Caracol de Colores", "", R.drawable.slider2_copia));
+        allItems.add(new ItemObjectMonAbs("Tambor de los Parches", "", R.drawable.slider3_copia));
+        allItems.add(new ItemObjectMonAbs("Tambor Alegre", "", R.drawable.slider3_copia));
+        allItems.add(new ItemObjectMonAbs("Gaitas", "", R.drawable.slider3_copia));
+        allItems.add(new ItemObjectMonAbs("Maraca", "", R.drawable.slider3_copia));
+        allItems.add(new ItemObjectMonAbs("Acordeón", "", R.drawable.slider3_copia));
+        allItems.add(new ItemObjectMonAbs("Monumento a las Guitarras", "", R.drawable.slider3_copia));
+        allItems.add(new ItemObjectMonAbs("Caja", "", R.drawable.slider3_copia));
+        allItems.add(new ItemObjectMonAbs("Puya y Merengue", "", R.drawable.slider3_copia));
+        allItems.add(new ItemObjectMonAbs("Paseo y Son", "", R.drawable.slider3_copia));
 
         return allItems;
     }

@@ -37,13 +37,13 @@ public class DescMonumento {
 
                     case 0:
 
-                        rowListItem.add(new ItemObjectDescMon("Nombre","Sierra Nevada: Montaña Sagrada1",""));
-                        rowListItem.add(new ItemObjectDescMon("Autor", "Gabriel Beltrán1",""));
-                        rowListItem.add(new ItemObjectDescMon("Medidas", "4.5 mts Alto\n6.0 mts Largo\n4.5 mts Ancho1",""));
-                        rowListItem.add(new ItemObjectDescMon("Ubicación","Plazoleta de Banderas Gobernación del Cesar1",""));
-                        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstractos1",""));
-                        rowListItem.add(new ItemObjectDescMon("Técnica","1Acero 304 ensamblado, soldado y bruñido. Ensamble y armado en el sitio determinado",""));
-                        rowListItem.add(new ItemObjectDescMon("Reseña","","1Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región.Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región."));
+                        rowListItem.add(new ItemObjectDescMon("Nombre","VICTORIA",""));
+                        rowListItem.add(new ItemObjectDescMon("Autor", "Gabriel Beltrán",""));
+                        rowListItem.add(new ItemObjectDescMon("Medidas", "7 mts x 3.20 mts x 2.25 mts",""));
+                        rowListItem.add(new ItemObjectDescMon("Ubicación","Coliseo Cubierto Julio Monsalvo",""));
+                        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstracto",""));
+                        rowListItem.add(new ItemObjectDescMon("Técnica","Acero 304 ensamblado soldado, bruñido y espejo",""));
+                        rowListItem.add(new ItemObjectDescMon("Reseña","","Representa la sensación de haber llegado a la meta, cumpliendo con el logro de los objetivos en cada uno de los eventos deportivos donde se relacionan la velocidad, los movimientos y el trabajo en equipo."));
 
                         titulo = "Victoria";
                         lista.add(R.drawable.slider1);
@@ -59,13 +59,13 @@ public class DescMonumento {
                         break;
                     case 1:
 
-                        rowListItem.add(new ItemObjectDescMon("Nombre","2Sierra Nevada: Montaña Sagrada",""));
-                        rowListItem.add(new ItemObjectDescMon("Autor", "2Gabriel Beltrán",""));
-                        rowListItem.add(new ItemObjectDescMon("Medidas", "24.5 mts Alto\n6.0 mts Largo\n4.5 mts Ancho",""));
-                        rowListItem.add(new ItemObjectDescMon("Ubicación","2Plazoleta de Banderas Gobernación del Cesar",""));
-                        rowListItem.add(new ItemObjectDescMon("Categoría", "2Abstractos",""));
-                        rowListItem.add(new ItemObjectDescMon("Técnica","2Acero 304 ensamblado, soldado y bruñido. Ensamble y armado en el sitio determinado",""));
-                        rowListItem.add(new ItemObjectDescMon("Reseña","","2Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región.Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región."));
+                        rowListItem.add(new ItemObjectDescMon("Nombre","FORTALEZA, VALOR Y JUSTICIA",""));
+                        rowListItem.add(new ItemObjectDescMon("Autor", "Gabriel Beltrán",""));
+                        rowListItem.add(new ItemObjectDescMon("Medidas", "4.30 mts de alto x 180 mts de largo x 140 mts",""));
+                        rowListItem.add(new ItemObjectDescMon("Ubicación","Plazoleta de Banderas. Gobernación del Cesar",""));
+                        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstracto",""));
+                        rowListItem.add(new ItemObjectDescMon("Técnica","Acero 304 ensamblado, soldado y pintado. (Electrostática)",""));
+                        rowListItem.add(new ItemObjectDescMon("Reseña","","Hace referencia al Cacique Upar, jefe de jefes que se distinguía por su fortaleza, valor y justicia en el pueblo de los Chimilas."));
 
                         titulo = "Fortaleza Valor y Justicia";
                         lista.add(R.drawable.slider1);
@@ -78,6 +78,14 @@ public class DescMonumento {
                                 .commit();
                         break;
                     case 2:
+
+                        rowListItem.add(new ItemObjectDescMon("Nombre","LECTOR DEL TIEMPO",""));
+                        rowListItem.add(new ItemObjectDescMon("Autor", "Juan Zuleta",""));
+                        rowListItem.add(new ItemObjectDescMon("Medidas", "4.30 mts de alto x 180 mts de largo x 140 mts",""));
+                        rowListItem.add(new ItemObjectDescMon("Ubicación","Archivo departamental Anibal Martínez Zuleta",""));
+                        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstracto",""));
+                        rowListItem.add(new ItemObjectDescMon("Técnica","Elaborado en chatarra",""));
+                        rowListItem.add(new ItemObjectDescMon("Reseña","","Es una semejanza a los antiguos historiadores de la región del Valle de Upar, los cuales estudiaban los archivos, mantenían la organización y conservación de los mismos."));
 
                         titulo = "Lector del Tiempo";
                         lista.add(R.drawable.slider1);
@@ -92,6 +100,14 @@ public class DescMonumento {
                         break;
                     case 3:
 
+                        rowListItem.add(new ItemObjectDescMon("Nombre","SIERRA NEVADA, MONTAÑA SAGRADA",""));
+                        rowListItem.add(new ItemObjectDescMon("Autor", "Gabriel Beltrán",""));
+                        rowListItem.add(new ItemObjectDescMon("Medidas", "4.5 mts Alto x 6.0 mts Largo x 4.5 mts Ancho",""));
+                        rowListItem.add(new ItemObjectDescMon("Ubicación","Plazoleta de Banderas. Gobernación del Cesar",""));
+                        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstracto",""));
+                        rowListItem.add(new ItemObjectDescMon("Técnica","Acero 304 ensamblado, soldado y bruñido,Ensamble y armado en el sitio determinado",""));
+                        rowListItem.add(new ItemObjectDescMon("Reseña","","Es una semejanza a los antiguos historiadores de la región del Valle de Upar, los cuales estudiaban los archivos, mantenían la organización y conservación de los mismos."));
+
                         titulo = "Sierra Nevada, Montaña Sagrada";
 
                         descMonumentoFragment = new DescMonumentoFragment();
@@ -102,6 +118,14 @@ public class DescMonumento {
                                 .commit();
                         break;
                     case 4:
+
+                        rowListItem.add(new ItemObjectDescMon("Nombre","EL OBELISCO",""));
+                        rowListItem.add(new ItemObjectDescMon("Autor", "Carlos García",""));
+                        rowListItem.add(new ItemObjectDescMon("Medidas", "30 mts de altura",""));
+                        rowListItem.add(new ItemObjectDescMon("Ubicación","Entrada a Valledupar, vía a Barranquilla",""));
+                        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstracto",""));
+                        rowListItem.add(new ItemObjectDescMon("Técnica","Cemento",""));
+                        rowListItem.add(new ItemObjectDescMon("Reseña","","Este monumento hace un homenaje a la vida."));
 
                         titulo = "El Obelisco";
                         lista.add(R.drawable.slider1);
@@ -115,6 +139,14 @@ public class DescMonumento {
                         break;
                     case 5:
 
+                        rowListItem.add(new ItemObjectDescMon("Nombre","REVOLUCIÓN EN MARCHA",""));
+                        rowListItem.add(new ItemObjectDescMon("Autor", "Rodrigo Arenas  Betancourt",""));
+                        rowListItem.add(new ItemObjectDescMon("Medidas", "N.D",""));
+                        rowListItem.add(new ItemObjectDescMon("Ubicación","Plaza Alfonso López",""));
+                        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstracto",""));
+                        rowListItem.add(new ItemObjectDescMon("Técnica","Acero y bronce",""));
+                        rowListItem.add(new ItemObjectDescMon("Reseña","","Este monumento conmemora a uno de los vallenatos más queridos, antiguo presidente de la República de Colombia, Dr. Alfonso López Pumarejo, quien llamó a su programa de gobierno <<La Revolución en Marcha>> que tenía como prioridad la modernización del país y su ingreso a la economía capitalista, es entonces cuando Valledupar deja de ser una remota aldea para convertirse en una ciudad prometedora."));
+
                         titulo = "Revolución en Marcha";
 
                         descMonumentoFragment = new DescMonumentoFragment();
@@ -126,6 +158,14 @@ public class DescMonumento {
                         break;
 
                     case 6:
+
+                        rowListItem.add(new ItemObjectDescMon("Nombre","LUNA VALLENATA",""));
+                        rowListItem.add(new ItemObjectDescMon("Autor", "Juan Zuleta",""));
+                        rowListItem.add(new ItemObjectDescMon("Medidas", "30 mts de altura",""));
+                        rowListItem.add(new ItemObjectDescMon("Ubicación","Parque barrio La Nevada",""));
+                        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstracto",""));
+                        rowListItem.add(new ItemObjectDescMon("Técnica","Elaborado en chatarra",""));
+                        rowListItem.add(new ItemObjectDescMon("Reseña","","Representa la necesidad de rescatar la bohemia y la poesía donde se elogiaba a la mujer y la energía femenina, cuando la Luna era fuente de inspiración de los enamorados y compositores."));
 
                         titulo = "Luna Vallenata";
 

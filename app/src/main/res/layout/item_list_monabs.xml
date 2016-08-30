@@ -24,9 +24,9 @@
         android:text="person_name"
         android:layout_alignTop="@+id/circleView_monabs"
         android:layout_toRightOf="@+id/circleView_monabs"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="8dp"
         android:layout_marginLeft="18dp"
-        android:textSize="16sp"
+        android:textSize="19sp"
         android:textStyle="bold"
         android:textColor="#c2110e"
         android:layout_toEndOf="@+id/circleView_monabs">
