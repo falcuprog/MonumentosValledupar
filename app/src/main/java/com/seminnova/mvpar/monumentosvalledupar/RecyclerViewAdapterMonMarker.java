@@ -1,0 +1,40 @@
+package com.seminnova.mvpar.monumentosvalledupar;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import java.util.List;
+
+public class RecyclerViewAdapterMonMarker extends RecyclerView.Adapter<RecyclerViewHolderMonMarker> {
+
+    private List<MonumentoMarker> ls;
+    private Context context;
+
+    public RecyclerViewAdapterMonMarker(Context context, List<MonumentoMarker> ls) {
+        this.ls = ls;
+        this.context = context;
+    }
+
+    @Override
+    public RecyclerViewHolderMonMarker onCreateViewHolder(ViewGroup parent, int viewType) {
+        View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_monmarker, null);
+        RecyclerViewHolderMonMarker rcv = new RecyclerViewHolderMonMarker(layoutView);
+        return rcv;
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerViewHolderMonMarker holder, int position) {
+        holder.nom_mon.setText(ls.get(position).getNombre());
+        holder.dis_mon.setText(ls.get(position).getDistancia());
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return ls.size();
+    }
+
+}

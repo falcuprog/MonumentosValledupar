@@ -107,28 +107,25 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         locationRequest.setFastestInterval(5 * 1000);
 
         /**/
-        LinearLayoutManager lLayout = new LinearLayoutManager(getActivity().getParent());
-
-        ArrayList<ItemObjectDescMon> rowListItem = new ArrayList<>();
-
-        rowListItem.add(new ItemObjectDescMon("Nombre","Sierra Nevada: Montaña Sagrada",""));
-        rowListItem.add(new ItemObjectDescMon("Autor", "Gabriel Beltrán",""));
-        rowListItem.add(new ItemObjectDescMon("Medidas", "4.5 mts Alto\n6.0 mts Largo\n4.5 mts Ancho",""));
-        rowListItem.add(new ItemObjectDescMon("Ubicación","Plazoleta de Banderas Gobernación del Cesar",""));
-        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstractos",""));
-        rowListItem.add(new ItemObjectDescMon("Técnica","Acero 304 ensamblado, soldado y bruñido. Ensamble y armado en el sitio determinado",""));
-        rowListItem.add(new ItemObjectDescMon("Reseña","","Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región.Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región."));
-
-        RecyclerView rView = (RecyclerView) view.findViewById(R.id.recycler_view_descmon);
-        rView.setLayoutManager(lLayout);
-
-        RecyclerViewAdapterDescMon rcAdapter = new RecyclerViewAdapterDescMon(view.getContext(), rowListItem);
-        rView.setAdapter(rcAdapter);
 
         /**/
 
         return view;
 
+    }
+
+    public void escribirDistancias(View view){
+
+        try {
+
+            LinearLayoutManager lLayout = new LinearLayoutManager(getActivity().getParent());
+
+            RecyclerView rView = (RecyclerView) view.findViewById(R.id.recycler_view_monmarker);
+            rView.setLayoutManager(lLayout);
+
+            RecyclerViewAdapterMonMarker rcAdapter = new RecyclerViewAdapterMonMarker(view.getContext(), ls);
+            rView.setAdapter(rcAdapter);
+        }catch (Exception e){}
     }
 
     @Override
@@ -262,13 +259,14 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
 
             distancia = getDistance(miUbicacion.getLatitude(), miUbicacion.getLongitude(), puntoDestino.getLatitude(), puntoDestino.getLongitude());
 
-
+            ls.get(i).setDistancia(distancia);
 
             if (miUbicacion!=null)
                 Toast.makeText(getContext(), "Distancia hasta: " + ls.get(i).getNombre() + " ** " + distancia + " **", Toast.LENGTH_SHORT).show();
 
 
         }
+        escribirDistancias(getView());
     }
 
     public String getDistance(final double lat1, final double lon1, final double lat2, final double lon2){
@@ -290,11 +288,11 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
                     JSONObject routes = array.getJSONObject(0);
                     JSONArray legs = routes.getJSONArray("legs");
 
-                    //JSONObject steps = legs.getJSONObject(0);
-                    //JSONObject distance = steps.getJSONObject("distance");
-                    //parsedDistance=distance.getString("text");
+                    JSONObject steps = legs.getJSONObject(0);
+                    JSONObject distance = steps.getJSONObject("distance");
+                    parsedDistance=distance.getString("text");
 
-                    /**/
+                    /*
                     JSONObject steps = legs.getJSONObject(0);
                     JSONObject distance = steps.getJSONObject("duration");
                     parsedDistance=distance.getString("text");
@@ -342,15 +340,18 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
                 if (marker.getTitle().equals("Monu1")){
                     //Toast.makeText(getApplicationContext(),marker.getSnippet(),Toast.LENGTH_SHORT).show();
                     //Llamar a un nuevo Fragmento
+                    DescMonumento descMonumento = new DescMonumento(0,0,getFragmentManager());
+                    descMonumento.mostrarDescripcion();
+
                 } else if (marker.getTitle().equals("Monu2")) {
                     //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
                     calcularDistancias();
                 } else if (marker.getTitle().equals("Monu3")) {
-                    Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
                 } else if (marker.getTitle().equals("Monu4")) {
-                    Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
                 } else if (marker.getTitle().equals("Monu5")) {
-                    Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
                 } else {
                     //Toast.makeText(getContext(), "Click en un marcador", Toast.LENGTH_SHORT).show();
                     Toast.makeText(getContext(), "miUbicacion en Lat: " + miUbicacion.getLatitude() + " Lon: " + miUbicacion.getLongitude(), Toast.LENGTH_SHORT).show();
@@ -375,11 +376,17 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         if (mGoogleApiClient.isConnected()) {
             mGoogleApiClient.disconnect();
         }
+
     }
 
     private void agregarMarcador(double lat, double lon) {
@@ -403,7 +410,9 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
             agregarMarcador(lat, lon);
 
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lon), 14.0f));
+            escribirDistancias(getView());
         }
+
     }
 
     LocationListener locationListener = new LocationListener() {
@@ -436,6 +445,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
         Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         actualizarUbicacion(location);
+
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 30000, 0, locationListener);
 
     }
