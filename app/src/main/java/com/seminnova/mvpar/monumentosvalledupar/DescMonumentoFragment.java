@@ -157,11 +157,12 @@ public class DescMonumentoFragment extends Fragment {
 
                     rowListItem = null;
 
-                    Fragment fragment = new MonAbsFragment();
+                    //Fragment fragment = new MonAbsFragment();
                     FragmentManager fragMana = getActivity().getSupportFragmentManager();
                     fragMana.beginTransaction()
                             .remove(DescMonumentoFragment.this)
-                            .replace(R.id.content_frame2, fragment)
+                            //.replace(R.id.content_frame2, fragment)
+                            //.hide(DescMonumentoFragment.this)
                             .commit();
 
                     return true;

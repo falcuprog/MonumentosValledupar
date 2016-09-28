@@ -14,10 +14,8 @@ import android.support.annotation.Nullable;
 import android.support.multidex.MultiDex;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +34,7 @@ import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -57,6 +56,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 import static android.app.Activity.RESULT_OK;
+import static com.seminnova.mvpar.monumentosvalledupar.R.id.map;
 
 public class BusgpsFragment extends Fragment implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, ResultCallback<LocationSettingsResult> {
 
@@ -91,7 +91,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         MultiDex.install(getContext());
 
         SupportMapFragment mapFragment = (SupportMapFragment) this.getChildFragmentManager()
-                .findFragmentById(R.id.map);
+                .findFragmentById(map);
         mapFragment.getMapAsync(this);
 
         /**/
@@ -140,7 +140,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         super.onStop();
     }
 
-    @Override
+    /*@Override
     public void onResume() {
         super.onResume();
 
@@ -166,7 +166,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
             }
         });
 
-    }
+    }*/
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
@@ -340,8 +340,17 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
                 if (marker.getTitle().equals("Monu1")){
                     //Toast.makeText(getApplicationContext(),marker.getSnippet(),Toast.LENGTH_SHORT).show();
                     //Llamar a un nuevo Fragmento
-                    DescMonumento descMonumento = new DescMonumento(0,0,getFragmentManager());
-                    descMonumento.mostrarDescripcion();
+                    /*DescMonumento descMonumento = new DescMonumento(0,0,getFragmentManager());
+                    descMonumento.mostrarDescripcion();*/
+
+                    DescMonumentoFragment fragment = new DescMonumentoFragment();
+
+                    //AcercaFragment fragment = new AcercaFragment();
+                    getFragmentManager().beginTransaction()
+                            .show(fragment)
+                            .hide(BusgpsFragment.this)
+                            .addToBackStack(null)
+                            .commit();
 
                 } else if (marker.getTitle().equals("Monu2")) {
                     //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
@@ -373,11 +382,6 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
             }
 
         }
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
     }
 
     @Override
@@ -484,5 +488,31 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         ls.add(monumentoMarker5);
 
     }
+
+    /**/
+
+    @Override
+    public void onPause() {
+
+        super.onPause();
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    private void setUpMap() {
+        try {
+            MapsInitializer.initialize(getActivity());
+        } catch (Exception e) {
+        }
+        miUbicacion();
+        actualizarUbicacion(miUbicacion);
+        calcularDistancias();
+    }
+
+    /**/
 
 }
