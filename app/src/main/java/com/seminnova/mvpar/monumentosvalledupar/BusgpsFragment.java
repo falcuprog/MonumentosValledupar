@@ -34,7 +34,6 @@ import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -77,7 +76,6 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
     private Marker marcador;
     double lat = 0.0, lon = 0.0;
 
-
     public BusgpsFragment() {
         // Required empty public constructor
     }
@@ -107,6 +105,8 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         locationRequest.setFastestInterval(5 * 1000);
 
         /**/
+
+
 
         /**/
 
@@ -139,34 +139,6 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         mGoogleApiClient.disconnect();
         super.onStop();
     }
-
-    /*@Override
-    public void onResume() {
-        super.onResume();
-
-        getView().setFocusableInTouchMode(true);
-        getView().requestFocus();
-        getView().setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK) {
-                    // handle back button's click listener
-                    Toast.makeText(getActivity(), "Back press", Toast.LENGTH_SHORT).show();
-
-                    Fragment fragment = new InicioFragment();
-                    FragmentManager fragMana = getFragmentManager();
-                    fragMana.beginTransaction()
-                            .remove(BusgpsFragment.this)
-                            .replace(R.id.content_frame2, fragment)
-                            .commit();
-
-                    return true;
-                }
-                return false;
-            }
-        });
-
-    }*/
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
@@ -340,17 +312,14 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
                 if (marker.getTitle().equals("Monu1")){
                     //Toast.makeText(getApplicationContext(),marker.getSnippet(),Toast.LENGTH_SHORT).show();
                     //Llamar a un nuevo Fragmento
-                    /*DescMonumento descMonumento = new DescMonumento(0,0,getFragmentManager());
-                    descMonumento.mostrarDescripcion();*/
 
-                    DescMonumentoFragment fragment = new DescMonumentoFragment();
+                    DescMonumento descMonumento = new DescMonumento(0,0,getFragmentManager(), BusgpsFragment.this);
+                    descMonumento.mostrarDescripcion();
 
-                    //AcercaFragment fragment = new AcercaFragment();
-                    getFragmentManager().beginTransaction()
-                            .show(fragment)
+                    /*DescMonumentoFragment fragment = new DescMonumentoFragment();*/
+                    /*getFragmentManager().beginTransaction()
                             .hide(BusgpsFragment.this)
-                            .addToBackStack(null)
-                            .commit();
+                            .commit();*/
 
                 } else if (marker.getTitle().equals("Monu2")) {
                     //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
@@ -382,15 +351,6 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
             }
 
         }
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (mGoogleApiClient.isConnected()) {
-            mGoogleApiClient.disconnect();
-        }
-
     }
 
     private void agregarMarcador(double lat, double lon) {
@@ -488,31 +448,5 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         ls.add(monumentoMarker5);
 
     }
-
-    /**/
-
-    @Override
-    public void onPause() {
-
-        super.onPause();
-
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    private void setUpMap() {
-        try {
-            MapsInitializer.initialize(getActivity());
-        } catch (Exception e) {
-        }
-        miUbicacion();
-        actualizarUbicacion(miUbicacion);
-        calcularDistancias();
-    }
-
-    /**/
 
 }

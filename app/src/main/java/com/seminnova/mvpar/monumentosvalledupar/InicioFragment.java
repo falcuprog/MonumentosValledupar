@@ -158,7 +158,7 @@ public class InicioFragment extends Fragment implements BaseSliderView.OnSliderC
 
 }
 
-class YourPagerAdapter extends FragmentStatePagerAdapter {
+    class YourPagerAdapter extends FragmentStatePagerAdapter {
 
     public YourPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -182,7 +182,7 @@ class YourPagerAdapter extends FragmentStatePagerAdapter {
     }
 }
 
-class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourRecyclerViewHolder> {
+    class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourRecyclerViewHolder> {
     private ArrayList<String> list = new ArrayList<>();
     private LayoutInflater inflater;
 
@@ -293,9 +293,6 @@ class YourRecyclerAdapter extends RecyclerView.Adapter<YourRecyclerAdapter.YourR
         }
     }
 }
-
-
-
 
        /* if (YourPagerAdapter.pos == 0) {
 

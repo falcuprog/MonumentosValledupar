@@ -17,10 +17,7 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
 
     private ZXingScannerView escaner;
 
-    public CodigoqrFragment() {
-        // Required empty public constructor
-
-    }
+    public CodigoqrFragment() { }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -252,7 +249,5 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
         });
 
     }
-
-
 
 }

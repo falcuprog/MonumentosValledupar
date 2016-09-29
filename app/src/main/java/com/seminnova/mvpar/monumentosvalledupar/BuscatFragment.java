@@ -21,7 +21,6 @@ public class BuscatFragment extends Fragment {
     private LinearLayoutManager lLayout;
 
     public BuscatFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -94,6 +93,5 @@ public class BuscatFragment extends Fragment {
         });
 
     }
-
 
 }

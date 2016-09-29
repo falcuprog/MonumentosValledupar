@@ -1,12 +1,10 @@
 package com.seminnova.mvpar.monumentosvalledupar;
 
-import android.support.v4.app.Fragment;
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -15,7 +13,6 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Toolbar toolbar;
-    ActionBar actionBar;
     DrawerLayout drawerLayout;
 
     @Override
@@ -59,19 +56,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-        /*NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(this);*/
         drawerLayout.closeDrawer(GravityCompat.START);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        /*InicioFragment fragment = new InicioFragment();
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.content_frame2, fragment)
-                .commit();*/
-
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_frame2, new InicioFragment())
@@ -84,12 +72,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-
-        boolean fragmentTransaction = false;
-
-        Fragment fragmento = null;
-
-        FragmentManager fragmentManager = getFragmentManager();
 
         if (id == R.id.inicio_id) {
 
@@ -123,27 +105,36 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .commit();
         }
 
-        /*if(fragmentTransaction) {
+        //if(fragmentTransaction) {
 
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame2, fragmento)
-                    .commit();
-            item.setChecked(true);
+          //  fragmentManager.beginTransaction()
+            //        .replace(R.id.content_frame2, fragmento)
+              //      .commit();
+            //item.setChecked(true);
 
-        }*/
+        //}
+
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
 
     }
 
-    @Override
     public void onBackPressed() {
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+
+            final Fragment fragmentById = getSupportFragmentManager().findFragmentById(R.id.content_frame2);
+            if (fragmentById.getClass().getName().equals("com.seminnova.mvpar.monumentosvalledupar.BusgpsFragment")) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame2, new InicioFragment())
+                        .commit();
+            }
+            else {
+                super.onBackPressed();
+            }
         }
     }
 

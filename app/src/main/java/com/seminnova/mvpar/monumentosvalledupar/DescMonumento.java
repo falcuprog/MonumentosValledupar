@@ -14,8 +14,17 @@ public class DescMonumento {
     public static int categoria, monumento;
     public static ArrayList<Integer> lista;
     public static String titulo;
+    public static Fragment f;
 
     public List<ItemObjectDescMon> rowListItem = new ArrayList<ItemObjectDescMon>();
+
+    public DescMonumento(int categoria, int monumento, FragmentManager fragmentManager, Fragment f) {
+        lista = new ArrayList<Integer>();
+        this.categoria = categoria;
+        this.monumento = monumento;
+        this.fragmentManager = fragmentManager;
+        this.f = f;
+    }
 
     public DescMonumento(int categoria, int monumento, FragmentManager fragmentManager) {
 
@@ -51,7 +60,8 @@ public class DescMonumento {
                         descMonumentoFragment = new DescMonumentoFragment();
                         descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
+                                .add(R.id.content_frame2, descMonumentoFragment)
+                                .hide(f)
                                 .addToBackStack(null)
                                 .commit();
                         break;
