@@ -60,8 +60,9 @@ import static com.seminnova.mvpar.monumentosvalledupar.R.id.map;
 public class BusgpsFragment extends Fragment implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, ResultCallback<LocationSettingsResult> {
 
     //
-    String parsedDistance;
-    String response;
+    static String parsedDistance;
+    static String response;
+    static String duracion;
     //
 
     private GoogleMap mMap;
@@ -126,6 +127,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
             RecyclerViewAdapterMonMarker rcAdapter = new RecyclerViewAdapterMonMarker(getView().getContext(), ls);
             rView.setAdapter(rcAdapter);
         }catch (Exception e){}
+
     }
 
     @Override
@@ -232,6 +234,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
             distancia = getDistance(miUbicacion.getLatitude(), miUbicacion.getLongitude(), puntoDestino.getLatitude(), puntoDestino.getLongitude());
 
             ls.get(i).setDistancia(distancia);
+            ls.get(i).setDuracion(duracion);
 
             //if (miUbicacion!=null)
                 //Toast.makeText(getContext(), "Distancia hasta: " + ls.get(i).getNombre() + " ** " + distancia + " **", Toast.LENGTH_SHORT).show();
@@ -241,7 +244,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         escribirDistancias();
     }
 
-    public String getDistance(final double lat1, final double lon1, final double lat2, final double lon2){
+    public static String getDistance(final double lat1, final double lon1, final double lat2, final double lon2){
 
         Thread thread=new Thread(new Runnable() {
             @Override
@@ -264,10 +267,9 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
                     JSONObject distance = steps.getJSONObject("distance");
                     parsedDistance=distance.getString("text");
 
-                    /*
-                    JSONObject steps = legs.getJSONObject(0);
-                    JSONObject distance = steps.getJSONObject("duration");
-                    parsedDistance=distance.getString("text");
+                    //JSONObject steps = legs.getJSONObject(0);
+                    JSONObject duration = steps.getJSONObject("duration");
+                    duracion = duration.getString("text");
 
                     /**/
                 } catch (ProtocolException e) {
@@ -345,9 +347,9 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CHECK_SETTINGS) {
             if (resultCode == RESULT_OK) {
-                Toast.makeText(getContext(), "GPS enabled", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getContext(), "GPS enabled", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(getContext(), "GPS is not enabled", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getContext(), "GPS is not enabled", Toast.LENGTH_LONG).show();
             }
 
         }

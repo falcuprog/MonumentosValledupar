@@ -29,7 +29,7 @@ public class RecyclerViewAdapterMonMarker extends RecyclerView.Adapter<RecyclerV
     public void onBindViewHolder(RecyclerViewHolderMonMarker holder, int position) {
         holder.nom_mon.setText(ls.get(position).getNombre());
         holder.dis_mon.setText(ls.get(position).getDistancia());
-
+        holder.dur_mon.setText(ls.get(position).getDuracion());
     }
 
     @Override

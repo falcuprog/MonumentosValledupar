@@ -6,12 +6,14 @@ public class MonumentoMarker {
     private double lat;
     private double lon;
     private String distancia;
+    private String duracion;
 
-    public MonumentoMarker(String nombre, double lat, double lon, String distancia) {
+    public MonumentoMarker(String nombre, double lat, double lon, String distancia, String duracion) {
         this.nombre = nombre;
         this.lat = lat;
         this.lon = lon;
         this.distancia = distancia;
+        this.duracion = duracion;
     }
 
     public  MonumentoMarker(){}
@@ -47,4 +49,13 @@ public class MonumentoMarker {
     public void setDistancia(String distancia) {
         this.distancia = distancia;
     }
+
+    public String getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(String duracion) {
+        this.duracion = duracion;
+    }
+
 }
