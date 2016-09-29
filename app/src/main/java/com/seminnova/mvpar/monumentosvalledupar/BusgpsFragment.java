@@ -114,16 +114,16 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
 
     }
 
-    public void escribirDistancias(View view){
+    public void escribirDistancias(){
 
         try {
 
             LinearLayoutManager lLayout = new LinearLayoutManager(getActivity().getParent());
 
-            RecyclerView rView = (RecyclerView) view.findViewById(R.id.recycler_view_monmarker);
+            RecyclerView rView = (RecyclerView) getView().findViewById(R.id.recycler_view_monmarker);
             rView.setLayoutManager(lLayout);
 
-            RecyclerViewAdapterMonMarker rcAdapter = new RecyclerViewAdapterMonMarker(view.getContext(), ls);
+            RecyclerViewAdapterMonMarker rcAdapter = new RecyclerViewAdapterMonMarker(getView().getContext(), ls);
             rView.setAdapter(rcAdapter);
         }catch (Exception e){}
     }
@@ -233,12 +233,12 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
 
             ls.get(i).setDistancia(distancia);
 
-            if (miUbicacion!=null)
-                Toast.makeText(getContext(), "Distancia hasta: " + ls.get(i).getNombre() + " ** " + distancia + " **", Toast.LENGTH_SHORT).show();
+            //if (miUbicacion!=null)
+                //Toast.makeText(getContext(), "Distancia hasta: " + ls.get(i).getNombre() + " ** " + distancia + " **", Toast.LENGTH_SHORT).show();
 
 
         }
-        escribirDistancias(getView());
+        escribirDistancias();
     }
 
     public String getDistance(final double lat1, final double lon1, final double lat2, final double lon2){
@@ -374,7 +374,8 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
             agregarMarcador(lat, lon);
 
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lon), 14.0f));
-            escribirDistancias(getView());
+            calcularDistancias();
+            escribirDistancias();
         }
 
     }
@@ -410,7 +411,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         actualizarUbicacion(location);
 
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 30000, 0, locationListener);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 15000, 0, locationListener);
 
     }
 
