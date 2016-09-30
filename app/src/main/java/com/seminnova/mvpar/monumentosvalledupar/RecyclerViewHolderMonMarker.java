@@ -9,6 +9,7 @@ public class RecyclerViewHolderMonMarker extends RecyclerView.ViewHolder impleme
     public TextView nom_mon;
     public TextView dis_mon;
     public TextView dur_mon;
+    public TextView dismt_mon;
 
     public RecyclerViewHolderMonMarker(View itemView) {
         super(itemView);
@@ -18,6 +19,7 @@ public class RecyclerViewHolderMonMarker extends RecyclerView.ViewHolder impleme
         nom_mon = (TextView) itemView.findViewById(R.id.nom_mon);
         dis_mon = (TextView) itemView.findViewById(R.id.dis_mon);
         dur_mon = (TextView) itemView.findViewById(R.id.dur_mon);
+        dismt_mon = (TextView) itemView.findViewById(R.id.dismt_mon);
 
     }
 

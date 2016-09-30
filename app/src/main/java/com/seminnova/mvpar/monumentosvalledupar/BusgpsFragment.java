@@ -63,6 +63,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
     static String parsedDistance;
     static String response;
     static String duracion;
+    static String distanciamt;
     //
 
     private GoogleMap mMap;
@@ -221,20 +222,20 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
 
     public void calcularDistancias() {
 
-        String distancia;
+        String distanciakm;
         Location puntoDestino;
 
         for (int i = 0; i < ls.size(); i++){
-
 
             puntoDestino = new Location(ls.get(i).getNombre());
             puntoDestino.setLatitude(ls.get(i).getLat());
             puntoDestino.setLongitude(ls.get(i).getLon());
 
-            distancia = getDistance(miUbicacion.getLatitude(), miUbicacion.getLongitude(), puntoDestino.getLatitude(), puntoDestino.getLongitude());
+            distanciakm = getDistance(miUbicacion.getLatitude(), miUbicacion.getLongitude(), puntoDestino.getLatitude(), puntoDestino.getLongitude());
 
-            ls.get(i).setDistancia(distancia);
+            ls.get(i).setDistanciakm(distanciakm);
             ls.get(i).setDuracion(duracion);
+            ls.get(i).setDistanciamt(distanciamt);
 
             //if (miUbicacion!=null)
                 //Toast.makeText(getContext(), "Distancia hasta: " + ls.get(i).getNombre() + " ** " + distancia + " **", Toast.LENGTH_SHORT).show();
@@ -266,8 +267,8 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
                     JSONObject steps = legs.getJSONObject(0);
                     JSONObject distance = steps.getJSONObject("distance");
                     parsedDistance=distance.getString("text");
+                    distanciamt = distance.getString("value");
 
-                    //JSONObject steps = legs.getJSONObject(0);
                     JSONObject duration = steps.getJSONObject("duration");
                     duracion = duration.getString("text");
 
@@ -325,7 +326,6 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
 
                 } else if (marker.getTitle().equals("Monu2")) {
                     //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
-                    calcularDistancias();
                 } else if (marker.getTitle().equals("Monu3")) {
                     //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
                 } else if (marker.getTitle().equals("Monu4")) {
@@ -383,6 +383,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
     }
 
     LocationListener locationListener = new LocationListener() {
+
         @Override
         public void onLocationChanged(Location location) {
             actualizarUbicacion(location);
@@ -402,6 +403,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         public void onProviderDisabled(String s) {
 
         }
+
     };
 
     private void miUbicacion() {

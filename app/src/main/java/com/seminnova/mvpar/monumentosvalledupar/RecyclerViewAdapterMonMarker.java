@@ -28,8 +28,9 @@ public class RecyclerViewAdapterMonMarker extends RecyclerView.Adapter<RecyclerV
     @Override
     public void onBindViewHolder(RecyclerViewHolderMonMarker holder, int position) {
         holder.nom_mon.setText(ls.get(position).getNombre());
-        holder.dis_mon.setText(ls.get(position).getDistancia());
+        holder.dis_mon.setText(ls.get(position).getDistanciakm());
         holder.dur_mon.setText(ls.get(position).getDuracion());
+        holder.dismt_mon.setText(ls.get(position).getDistanciamt());
     }
 
     @Override
