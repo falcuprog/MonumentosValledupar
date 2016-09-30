@@ -321,7 +321,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                if (marker.getTitle().equals("Monu1")){
+                if (marker.getTitle().equals("La Victoria")) {
                     //Toast.makeText(getApplicationContext(),marker.getSnippet(),Toast.LENGTH_SHORT).show();
                     //Llamar a un nuevo Fragmento
 
@@ -333,14 +333,22 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
                             .hide(BusgpsFragment.this)
                             .commit();*/
 
-                } else if (marker.getTitle().equals("Monu2")) {
+                } else if (marker.getTitle().equals("Fortaleza, Valor y Justicia")) {
                     //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
-                } else if (marker.getTitle().equals("Monu3")) {
+                    DescMonumento descMonumento = new DescMonumento(0,1,getFragmentManager(), BusgpsFragment.this);
+                    descMonumento.mostrarDescripcion();
+                } else if (marker.getTitle().equals("Lector del Tiempo")) {
                     //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
-                } else if (marker.getTitle().equals("Monu4")) {
+                    DescMonumento descMonumento = new DescMonumento(0,2,getFragmentManager(), BusgpsFragment.this);
+                    descMonumento.mostrarDescripcion();
+                } else if (marker.getTitle().equals("Sierra Nevada")) {
                     //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
-                } else if (marker.getTitle().equals("Monu5")) {
+                    DescMonumento descMonumento = new DescMonumento(0,3,getFragmentManager(), BusgpsFragment.this);
+                    descMonumento.mostrarDescripcion();
+                } else if (marker.getTitle().equals("El Obelisco")) {
                     //Toast.makeText(getContext(), marker.getSnippet(), Toast.LENGTH_SHORT).show();
+                    DescMonumento descMonumento = new DescMonumento(0,4,getFragmentManager(), BusgpsFragment.this);
+                    descMonumento.mostrarDescripcion();
                 } else {
                     //Toast.makeText(getContext(), "Click en un marcador", Toast.LENGTH_SHORT).show();
                     Toast.makeText(getContext(), "miUbicacion en Lat: " + miUbicacion.getLatitude() + " Lon: " + miUbicacion.getLongitude(), Toast.LENGTH_SHORT).show();
@@ -432,31 +440,31 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
 
     public void crearMarkers() {
         MonumentoMarker monumentoMarker = new MonumentoMarker();
-        monumentoMarker.setNombre("Monu1");
+        monumentoMarker.setNombre("La Victoria");
         monumentoMarker.setLat(10.4598546);
         monumentoMarker.setLon(-73.2467258);
         ls.add(monumentoMarker);
 
         MonumentoMarker monumentoMarker2 = new MonumentoMarker();
-        monumentoMarker2.setNombre("Monu2");
+        monumentoMarker2.setNombre("Fortaleza, Valor y Justicia");
         monumentoMarker2.setLat(10.4698546);
         monumentoMarker2.setLon(-73.2467258);
         ls.add(monumentoMarker2);
 
         MonumentoMarker monumentoMarker3 = new MonumentoMarker();
-        monumentoMarker3.setNombre("Monu3");
+        monumentoMarker3.setNombre("Lector del Tiempo");
         monumentoMarker3.setLat(10.4798546);
         monumentoMarker3.setLon(-73.2467258);
         ls.add(monumentoMarker3);
 
         MonumentoMarker monumentoMarker4 = new MonumentoMarker();
-        monumentoMarker4.setNombre("Monu4");
+        monumentoMarker4.setNombre("Sierra Nevada");
         monumentoMarker4.setLat(10.4798546);
         monumentoMarker4.setLon(-73.2567258);
         ls.add(monumentoMarker4);
 
         MonumentoMarker monumentoMarker5 = new MonumentoMarker();
-        monumentoMarker5.setNombre("Monu5");
+        monumentoMarker5.setNombre("El Obelisco");
         monumentoMarker5.setLat(10.4898546);
         monumentoMarker5.setLon(-73.2567258);
         ls.add(monumentoMarker5);

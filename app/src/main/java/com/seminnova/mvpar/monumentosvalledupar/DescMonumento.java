@@ -81,7 +81,8 @@ public class DescMonumento {
                         descMonumentoFragment = new DescMonumentoFragment();
                         descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
+                                .add(R.id.content_frame2, descMonumentoFragment)
+                                .hide(f)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -102,7 +103,8 @@ public class DescMonumento {
                         descMonumentoFragment = new DescMonumentoFragment();
                         descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
+                                .add(R.id.content_frame2, descMonumentoFragment)
+                                .hide(f)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -122,7 +124,8 @@ public class DescMonumento {
                         descMonumentoFragment = new DescMonumentoFragment();
                         descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
+                                .add(R.id.content_frame2, descMonumentoFragment)
+                                .hide(f)
                                 .addToBackStack(null)
                                 .commit();
                         break;
@@ -142,7 +145,8 @@ public class DescMonumento {
                         descMonumentoFragment = new DescMonumentoFragment();
                         descMonumentoFragment.setData(rowListItem);
                         fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
+                                .add(R.id.content_frame2, descMonumentoFragment)
+                                .hide(f)
                                 .addToBackStack(null)
                                 .commit();
                         break;
