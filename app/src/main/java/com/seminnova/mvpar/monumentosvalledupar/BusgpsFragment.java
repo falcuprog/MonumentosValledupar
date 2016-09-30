@@ -53,6 +53,8 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import static android.app.Activity.RESULT_OK;
 import static com.seminnova.mvpar.monumentosvalledupar.R.id.map;
@@ -63,7 +65,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
     static String parsedDistance;
     static String response;
     static String duracion;
-    static String distanciamt;
+    static double distanciamt;
     //
 
     private GoogleMap mMap;
@@ -119,6 +121,13 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
     public void escribirDistancias(){
 
         try {
+
+            Collections.sort(ls, new Comparator<MonumentoMarker>() {
+                @Override
+                public int compare(MonumentoMarker mon1, MonumentoMarker mon2) {
+                    return new Double(mon1.getDistanciamt()).compareTo(new Double(mon2.getDistanciamt()));
+                }
+            });
 
             LinearLayoutManager lLayout = new LinearLayoutManager(getActivity().getParent());
 
@@ -267,7 +276,7 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
                     JSONObject steps = legs.getJSONObject(0);
                     JSONObject distance = steps.getJSONObject("distance");
                     parsedDistance=distance.getString("text");
-                    distanciamt = distance.getString("value");
+                    distanciamt = Double.parseDouble(distance.getString("value"));
 
                     JSONObject duration = steps.getJSONObject("duration");
                     duracion = duration.getString("text");

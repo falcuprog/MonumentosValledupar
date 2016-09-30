@@ -7,11 +7,11 @@ public class MonumentoMarker {
     private double lon;
     private String distanciakm;
     private String duracion;
-    private String distanciamt;
+    private double distanciamt;
 
     public  MonumentoMarker(){}
 
-    public MonumentoMarker(String nombre, double lat, double lon, String distanciakm, String duracion, String distanciamt) {
+    public MonumentoMarker(String nombre, double lat, double lon, String distanciakm, String duracion, double distanciamt) {
         this.nombre = nombre;
         this.lat = lat;
         this.lon = lon;
@@ -60,11 +60,12 @@ public class MonumentoMarker {
         this.duracion = duracion;
     }
 
-    public String getDistanciamt() {
+    public double getDistanciamt() {
         return distanciamt;
     }
 
-    public void setDistanciamt(String distanciamt) {
+    public void setDistanciamt(double distanciamt) {
         this.distanciamt = distanciamt;
     }
+
 }

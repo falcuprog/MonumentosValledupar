@@ -30,7 +30,7 @@ public class RecyclerViewAdapterMonMarker extends RecyclerView.Adapter<RecyclerV
         holder.nom_mon.setText(ls.get(position).getNombre());
         holder.dis_mon.setText(ls.get(position).getDistanciakm());
         holder.dur_mon.setText(ls.get(position).getDuracion());
-        holder.dismt_mon.setText(ls.get(position).getDistanciamt());
+        holder.dismt_mon.setText(Double.toString(ls.get(position).getDistanciamt()));
     }
 
     @Override
