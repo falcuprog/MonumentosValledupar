@@ -27,4 +27,5 @@ public class RecyclerViewHolderMonMarker extends RecyclerView.ViewHolder impleme
     public void onClick(View view) {
 
     }
+
 }

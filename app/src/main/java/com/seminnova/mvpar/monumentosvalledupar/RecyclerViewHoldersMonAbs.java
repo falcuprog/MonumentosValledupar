@@ -39,4 +39,5 @@ public class RecyclerViewHoldersMonAbs extends RecyclerView.ViewHolder implement
         descMonumento.mostrarDescripcion();
 
     }
+
 }

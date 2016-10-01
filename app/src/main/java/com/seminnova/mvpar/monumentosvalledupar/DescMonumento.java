@@ -57,13 +57,6 @@ public class DescMonumento {
                         titulo = "Victoria";
                         lista.add(R.drawable.mon_victoria);
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .add(R.id.content_frame2, descMonumentoFragment)
-                                .hide(f)
-                                .addToBackStack(null)
-                                .commit();
                         break;
                     case 1:
 
@@ -78,13 +71,6 @@ public class DescMonumento {
                         titulo = "Fortaleza Valor y Justicia";
                         lista.add(R.drawable.mon_forta);
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .add(R.id.content_frame2, descMonumentoFragment)
-                                .hide(f)
-                                .addToBackStack(null)
-                                .commit();
                         break;
                     case 2:
 
@@ -100,13 +86,6 @@ public class DescMonumento {
                         lista.add(R.drawable.slider1);
                         lista.add(R.drawable.slider2);
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .add(R.id.content_frame2, descMonumentoFragment)
-                                .hide(f)
-                                .addToBackStack(null)
-                                .commit();
                         break;
                     case 3:
 
@@ -121,13 +100,6 @@ public class DescMonumento {
                         titulo = "Sierra Nevada, Montaña Sagrada";
                         lista.add(R.drawable.mon_sierra);
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .add(R.id.content_frame2, descMonumentoFragment)
-                                .hide(f)
-                                .addToBackStack(null)
-                                .commit();
                         break;
                     case 4:
 
@@ -142,13 +114,6 @@ public class DescMonumento {
                         titulo = "El Obelisco";
                         lista.add(R.drawable.mon_obe);
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .add(R.id.content_frame2, descMonumentoFragment)
-                                .hide(f)
-                                .addToBackStack(null)
-                                .commit();
                         break;
                     case 5:
 
@@ -163,12 +128,6 @@ public class DescMonumento {
                         titulo = "Revolución en Marcha";
                         lista.add(R.drawable.mon_revol);
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 6:
@@ -211,12 +170,6 @@ public class DescMonumento {
                         titulo = "Pedazo de Acordeón";
                         lista.add(R.drawable.mon_pedazo);
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 1:
@@ -233,12 +186,6 @@ public class DescMonumento {
 
                         lista.add(R.drawable.mon_cojun);
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 2:
@@ -255,13 +202,6 @@ public class DescMonumento {
                         titulo = "Los Poporos";
                         lista.add(R.drawable.mon_poporos);
 
-
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 3:
@@ -276,13 +216,6 @@ public class DescMonumento {
 
                         titulo = "María Mulata";
 
-
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 4:
@@ -298,12 +231,6 @@ public class DescMonumento {
                         titulo = "La sirena";
                         lista.add(R.drawable.mon_sirena);
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 5:
@@ -319,12 +246,6 @@ public class DescMonumento {
                         titulo = "Guacharaca";
                         lista.add(R.drawable.mon_guacha);
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 6:
@@ -340,12 +261,6 @@ public class DescMonumento {
                         titulo = "Las Dos Guitarras";
                         lista.add(R.drawable.slider1);
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 7:
@@ -358,15 +273,8 @@ public class DescMonumento {
                         rowListItem.add(new ItemObjectDescMon("Técnica","Bronce, hierro y láminas de Aluminio",""));
                         rowListItem.add(new ItemObjectDescMon("Reseña","","En un homenaje a la afición gallística que existe en los departamentos costeños, que evocan una tradición cultural."));
 
-
                         titulo = "Pelea de Gallos";
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 8:
@@ -381,12 +289,6 @@ public class DescMonumento {
 
                         titulo = "Caracol de Colores";
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 9:
@@ -401,12 +303,6 @@ public class DescMonumento {
 
                         titulo = "Tambor de Dos Parches";
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 10:
@@ -421,12 +317,6 @@ public class DescMonumento {
 
                         titulo = "Gaitas";
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 11:
@@ -439,15 +329,8 @@ public class DescMonumento {
                         rowListItem.add(new ItemObjectDescMon("Técnica","Mosaico de cerámica sobre concreto",""));
                         rowListItem.add(new ItemObjectDescMon("Reseña","","N.D"));
 
-
                         titulo = "Maraca";
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 12:
@@ -462,12 +345,6 @@ public class DescMonumento {
 
                         titulo = "Acordeón";
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 13:
@@ -482,12 +359,6 @@ public class DescMonumento {
 
                         titulo = "Monumento a las Guitarras";
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 14:
@@ -502,17 +373,9 @@ public class DescMonumento {
 
                         titulo = "Caja";
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
 
                     case 15:
-
-                        titulo = "Puya y Merengue";
 
                         rowListItem.add(new ItemObjectDescMon("Nombre","PUYA Y MERENGUE",""));
                         rowListItem.add(new ItemObjectDescMon("Autor", "Elsa Marina Losada",""));
@@ -522,12 +385,8 @@ public class DescMonumento {
                         rowListItem.add(new ItemObjectDescMon("Técnica","Mosaico de cerámica sobre concreto",""));
                         rowListItem.add(new ItemObjectDescMon("Reseña","","N.D"));
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
+                        titulo = "Puya y Merengue";
+
                         break;
 
                     case 16:
@@ -542,12 +401,6 @@ public class DescMonumento {
 
                         titulo = "Paseo y Son";
 
-                        descMonumentoFragment = new DescMonumentoFragment();
-                        descMonumentoFragment.setData(rowListItem);
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.content_frame2, descMonumentoFragment)
-                                .addToBackStack(null)
-                                .commit();
                         break;
                 }
                 break;
@@ -674,6 +527,24 @@ public class DescMonumento {
                 }
                 break;
             */
+        }
+
+        if (f != null) {
+
+            descMonumentoFragment = new DescMonumentoFragment();
+            descMonumentoFragment.setData(rowListItem);
+            fragmentManager.beginTransaction()
+                    .add(R.id.content_frame2, descMonumentoFragment)
+                    .hide(f)
+                    .addToBackStack(null)
+                    .commit();
+        } else {
+            descMonumentoFragment = new DescMonumentoFragment();
+            descMonumentoFragment.setData(rowListItem);
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_frame2, descMonumentoFragment)
+                    .addToBackStack(null)
+                    .commit();
         }
 
     }

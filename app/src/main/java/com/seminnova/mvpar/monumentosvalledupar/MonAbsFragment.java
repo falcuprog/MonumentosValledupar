@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-
 public class MonAbsFragment extends Fragment {
 
     private LinearLayoutManager lLayout;

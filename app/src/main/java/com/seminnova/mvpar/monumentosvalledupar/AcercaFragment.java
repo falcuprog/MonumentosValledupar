@@ -19,7 +19,6 @@ public class AcercaFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_acerca, container, false);
     }
 
-
     @Override
     public void onResume() {
         super.onResume();

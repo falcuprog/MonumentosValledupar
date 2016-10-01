@@ -13,19 +13,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 
     private List<ItemObject> itemList;
     private Context context;
-    private FragmentManager fragmentManager; //ojo
+    private FragmentManager fragmentManager;
 
-    public RecyclerViewAdapter(Context context, List<ItemObject> itemList, FragmentManager fragmentManager) {//ojo
+    public RecyclerViewAdapter(Context context, List<ItemObject> itemList, FragmentManager fragmentManager) {
         this.itemList = itemList;
         this.context = context;
-        this.fragmentManager = fragmentManager;//ojo
+        this.fragmentManager = fragmentManager;
     }
 
     @Override
     public RecyclerViewHolders onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_list, null);
-        RecyclerViewHolders rcv = new RecyclerViewHolders(layoutView, fragmentManager);//ojo
+        RecyclerViewHolders rcv = new RecyclerViewHolders(layoutView, fragmentManager);
         return rcv;
 
     }
@@ -40,4 +40,5 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     public int getItemCount() {
         return this.itemList.size();
     }
+
 }

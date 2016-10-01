@@ -39,4 +39,5 @@ public class RecyclerViewAdapterMonAbs extends RecyclerView.Adapter<RecyclerView
     public int getItemCount() {
         return this.itemList.size();
     }
+
 }

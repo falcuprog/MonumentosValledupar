@@ -21,7 +21,6 @@ public class ContaFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_conta, container, false);
     }
 
-
     @Override
     public void onResume() {
         super.onResume();
