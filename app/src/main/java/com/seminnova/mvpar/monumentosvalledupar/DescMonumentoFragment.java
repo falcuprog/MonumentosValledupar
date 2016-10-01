@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
@@ -37,7 +38,6 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
     List<DescMonObject> rowListItem = new ArrayList<DescMonObject>();
 
     public DescMonumentoFragment() {
-        // Required empty public constructor
     }
 
     public void setData(List<DescMonObject> ls) {
@@ -54,7 +54,7 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
         titulo = DescMonumento.titulo;
         lista = DescMonumento.lista;
 
-        //((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(titulo);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(titulo);
 
         mDemoSlider = (SliderLayout) view.findViewById(R.id.slider_desc);
         HashMap<String,Integer> url_maps = new HashMap<String, Integer>();

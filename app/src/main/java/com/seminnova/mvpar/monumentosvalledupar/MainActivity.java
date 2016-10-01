@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         * */
 
         toolbar = (Toolbar) findViewById(R.id.toolbar_ppal);
-        //toolbar.setTitle("Monumentos Valledupar");
         setSupportActionBar(toolbar);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -3,6 +3,7 @@ package com.seminnova.mvpar.monumentosvalledupar;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
@@ -31,7 +32,8 @@ public class ListaMonFragment extends Fragment {
 
         List<MonumentoObject> rowListItem = RecyclerViewHoldersCat.listaMon;
         titulo = RecyclerViewHoldersCat.titulo;
-        //((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(titulo);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(titulo);
 
         lLayout = new LinearLayoutManager(this.getActivity());
 

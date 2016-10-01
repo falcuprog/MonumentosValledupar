@@ -13,7 +13,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +36,6 @@ public class InicioFragment extends Fragment implements BaseSliderView.OnSliderC
 
     private SliderLayout mDemoSlider;
 
-    private Toolbar mToolbar;
     private ViewPager mPager;
     private YourPagerAdapter mAdapter;
     private TabLayout mTabLayout;
@@ -46,7 +44,6 @@ public class InicioFragment extends Fragment implements BaseSliderView.OnSliderC
     public static FragmentManager fragmentManager;
 
     public InicioFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -60,13 +57,10 @@ public class InicioFragment extends Fragment implements BaseSliderView.OnSliderC
 
         View view = inflater.inflate(R.layout.fragment_inicio, container, false);
 
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Monumentos Valledupar");
+
         context = getActivity().getApplicationContext();
         fragmentManager = getFragmentManager();
-
-        Toolbar mToolbar = (Toolbar) view.findViewById(R.id.app_bar);
-
-        AppCompatActivity activity = (AppCompatActivity) getActivity();
-        activity.setSupportActionBar(mToolbar);
 
         mDemoSlider = (SliderLayout) view.findViewById(R.id.slider);
         HashMap<String, Integer> url_maps = new HashMap<String, Integer>();

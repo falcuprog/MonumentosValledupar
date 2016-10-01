@@ -538,6 +538,7 @@ public class DescMonumento {
                     .hide(f)
                     .addToBackStack(null)
                     .commit();
+            f=null;
         } else {
             descMonumentoFragment = new DescMonumentoFragment();
             descMonumentoFragment.setData(rowListItem);

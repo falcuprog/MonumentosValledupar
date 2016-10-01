@@ -3,6 +3,7 @@ package com.seminnova.mvpar.monumentosvalledupar;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
@@ -29,10 +30,10 @@ public class BuscatFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_buscat, container, false);
 
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Búsqueda Categorías");
+
         List<CategoriaObject> lsCat = listaCategorias();
         lLayout = new LinearLayoutManager(view.getContext());
-
-        //((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Búsqueda Categorías");
 
         RecyclerView rView = (RecyclerView) view.findViewById(R.id.recycler_view);
         rView.setLayoutManager(lLayout);

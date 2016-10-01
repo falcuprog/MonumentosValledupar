@@ -3,6 +3,7 @@ package com.seminnova.mvpar.monumentosvalledupar;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,8 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_codigoqr, container, false);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Búsqueda QR");
 
         escaner = new ZXingScannerView(view.getContext());
 

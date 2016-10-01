@@ -33,12 +33,12 @@
                     android:layout_height="400dp"
                     tools:context="com.seminnova.mvpar.monumentosvalledupar.MainActivity" />
 
-                <android.support.v7.widget.Toolbar
+                <!--<android.support.v7.widget.Toolbar
                     android:id="@+id/app_bar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                    app:layout_collapseMode="pin"/>
+                    app:layout_collapseMode="pin"/>-->
 
             </android.support.design.widget.CollapsingToolbarLayout>
 

@@ -14,6 +14,7 @@ import android.support.annotation.Nullable;
 import android.support.multidex.MultiDex;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -90,6 +91,8 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
 
         View view = inflater.inflate(R.layout.fragment_busgps, container, false);
 
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Búsqueda GPS");
+
         MultiDex.install(getContext());
 
         SupportMapFragment mapFragment = (SupportMapFragment) this.getChildFragmentManager()
@@ -138,6 +141,13 @@ public class BusgpsFragment extends Fragment implements OnMapReadyCallback, Goog
             rView.setAdapter(rcAdapter);
         }catch (Exception e){}
 
+    }
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        if (!hidden)
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Búsqueda GPS");
     }
 
     @Override
