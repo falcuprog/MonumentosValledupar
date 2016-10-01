@@ -25,6 +25,5 @@ public class RecyclerViewHoldersDescMon extends RecyclerView.ViewHolder implemen
     @Override
     public void onClick(View view) {
         //Toast.makeText(view.getContext(), "Monumento " + getPosition(), Toast.LENGTH_SHORT).show();
-
     }
 }

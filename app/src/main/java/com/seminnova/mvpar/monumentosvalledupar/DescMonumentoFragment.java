@@ -1,5 +1,8 @@
 package com.seminnova.mvpar.monumentosvalledupar;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,18 +12,21 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
-import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
-import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
+import com.daimajia.slider.library.Transformers.BaseTransformer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 
-public class DescMonumentoFragment extends Fragment {
+public class DescMonumentoFragment extends Fragment implements BaseSliderView.OnSliderClickListener {
 
     private SliderLayout mDemoSlider;
     private LinearLayoutManager lLayout;
@@ -42,12 +48,11 @@ public class DescMonumentoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_desc_monumento, container, false);
 
         titulo = DescMonumento.titulo;
         lista = DescMonumento.lista;
-
 
         //((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(titulo);
 
@@ -58,14 +63,13 @@ public class DescMonumentoFragment extends Fragment {
             url_maps.put(titulo + " ", lista.get(i));
         }
 
-        //mDemoSlider.stopAutoCycle();
+        mDemoSlider.stopAutoCycle();
 
-        for(String name : url_maps.keySet()){
+        /*for(String name : url_maps.keySet()){
             TextSliderView textSliderView = new TextSliderView(view.getContext());//
             // initialize a SliderLayout
             textSliderView
                     .description(name)
-                    //.image(url_maps.get(name))
                     .image(url_maps.get(name))
                     .setScaleType(BaseSliderView.ScaleType.Fit);
 
@@ -75,12 +79,30 @@ public class DescMonumentoFragment extends Fragment {
                     .putString("extra", name);
 
             mDemoSlider.addSlider(textSliderView);
-        }
-        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
-        mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
-        mDemoSlider.setCustomAnimation(new DescriptionAnimation());
-        mDemoSlider.setDuration(4000);
+        }*/
 
+        for(String name : url_maps.keySet()){
+            DefaultSliderView defaultSliderView = new DefaultSliderView(view.getContext());
+
+            defaultSliderView
+                    .image(url_maps.get(name))
+                    .setScaleType(BaseSliderView.ScaleType.FitCenterCrop)
+                    .setOnSliderClickListener(this);
+            mDemoSlider.addSlider(defaultSliderView);
+        }
+
+        mDemoSlider.setPagerTransformer(false, new BaseTransformer() {
+            @Override
+            protected void onTransform(View view, float position) {
+            }
+        });
+
+
+
+        //mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
+        //mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+        //mDemoSlider.setCustomAnimation(new DescriptionAnimation());
+        //mDemoSlider.setDuration(4000);
 
         /*
         *
@@ -116,31 +138,11 @@ public class DescMonumentoFragment extends Fragment {
 
     }
 
-    /*@Override
+    @Override
     public void onStop() {
         mDemoSlider.stopAutoCycle();
         super.onStop();
-    }*/
-
-    /*@Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
     }
-
-    @Override
-    public void onPageSelected(int position) {
-
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state) {
-
-    }
-
-    @Override
-    public void onSliderClick(BaseSliderView slider) {
-
-    }*/
 
     @Override
     public void onResume() {
@@ -171,6 +173,33 @@ public class DescMonumentoFragment extends Fragment {
             }
         });
 
+    }
+
+    @Override
+    public void onSliderClick(BaseSliderView slider) {
+        try {
+            ampliarImagen(lista.get(0));
+        }catch (Exception ex) {}
+    }
+
+    public void ampliarImagen(int img) {
+        Dialog builder = new Dialog(getContext());
+        builder.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        builder.getWindow().setBackgroundDrawable(
+                new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialogInterface) {
+                //nothing;
+            }
+        });
+
+        ImageView imageView = new ImageView(getContext());
+        imageView.setBackgroundResource(img);
+        builder.addContentView(imageView, new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT));
+        builder.show();
     }
 
 }

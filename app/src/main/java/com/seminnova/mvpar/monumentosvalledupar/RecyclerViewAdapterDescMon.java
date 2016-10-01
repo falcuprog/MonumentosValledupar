@@ -14,7 +14,6 @@ public class RecyclerViewAdapterDescMon extends RecyclerView.Adapter<RecyclerVie
     private List<ItemObjectDescMon> itemList;
     private Context context;
 
-
     public RecyclerViewAdapterDescMon(Context context, List<ItemObjectDescMon> itemList) {
         this.itemList = itemList;
         this.context = context;
@@ -48,4 +47,5 @@ public class RecyclerViewAdapterDescMon extends RecyclerView.Adapter<RecyclerVie
     public int getItemCount() {
         return this.itemList.size();
     }
+
 }
