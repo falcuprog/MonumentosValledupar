@@ -1,17 +1,3 @@
-<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.seminnova.mvpar.monumentosvalledupar.MonAbsFragment">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
--->
-
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -26,10 +12,10 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.seminnova.mvpar.monumentosvalledupar.MonAbsFragment">
+        tools:context="com.seminnova.mvpar.monumentosvalledupar.ListaMonFragment">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view_monabs"
+            android:id="@+id/recycler_view_listamon"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </android.support.v7.widget.RecyclerView>

@@ -11,13 +11,12 @@ import java.util.List;
 
 public class RecyclerViewAdapterDescMon extends RecyclerView.Adapter<RecyclerViewHoldersDescMon> {
 
-    private List<ItemObjectDescMon> itemList;
+    private List<DescMonObject> lsMon;
     private Context context;
 
-    public RecyclerViewAdapterDescMon(Context context, List<ItemObjectDescMon> itemList) {
-        this.itemList = itemList;
+    public RecyclerViewAdapterDescMon(Context context, List<DescMonObject> lsMon) {
+        this.lsMon = lsMon;
         this.context = context;
-
     }
 
     @Override
@@ -29,13 +28,14 @@ public class RecyclerViewAdapterDescMon extends RecyclerView.Adapter<RecyclerVie
 
     @Override
     public void onBindViewHolder(RecyclerViewHoldersDescMon holder, int position) {
-        holder.itemMon.setText(itemList.get(position).getItem());
-        holder.descMon.setText(itemList.get(position).getDesc());
-        holder.desc2Mon.setText(itemList.get(position).getDesc2());
+
+        holder.itemMon.setText(lsMon.get(position).getItem());
+        holder.descMon.setText(lsMon.get(position).getDesc());
+        holder.desc2Mon.setText(lsMon.get(position).getDesc2());
 
         //holder.itemView.findViewById(R.id.separador).setBackgroundColor(0xffffffff);
 
-        if (itemList.get(position).getDesc2().equals("")) {
+        if (lsMon.get(position).getDesc2().equals("")) {
             holder.itemView.findViewById(R.id.separador2).setBackgroundColor(Color.TRANSPARENT);
         } else {
             holder.itemView.findViewById(R.id.separador).setBackgroundColor(Color.TRANSPARENT);
@@ -45,7 +45,7 @@ public class RecyclerViewAdapterDescMon extends RecyclerView.Adapter<RecyclerVie
 
     @Override
     public int getItemCount() {
-        return this.itemList.size();
+        return this.lsMon.size();
     }
 
 }

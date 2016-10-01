@@ -1,12 +1,12 @@
 package com.seminnova.mvpar.monumentosvalledupar;
 
-public class ItemObjectDescMon {
+public class DescMonObject {
 
     private String item;
     private String desc;
     private String desc2;
 
-    public ItemObjectDescMon(String item, String desc, String desc2) {
+    public DescMonObject(String item, String desc, String desc2) {
         this.item = item;
         this.desc = desc;
         this.desc2 = desc2;

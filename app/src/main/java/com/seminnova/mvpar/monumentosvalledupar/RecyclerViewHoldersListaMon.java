@@ -6,24 +6,24 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class RecyclerViewHoldersMonAbs extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class RecyclerViewHoldersListaMon extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    public TextView personName;
-    public TextView personAddress;
-    public ImageView personPhoto;
+    public TextView monNom;
+    public TextView monDes;
+    public ImageView monImg;
     private FragmentManager fragMana;
     public static int categoria;
     public static String titulo;
     public int monumento;
 
-    public RecyclerViewHoldersMonAbs(View itemView, FragmentManager fragmentManager) {
+    public RecyclerViewHoldersListaMon(View itemView, FragmentManager fragmentManager) {
         super(itemView);
 
         itemView.setOnClickListener(this);
 
-        personName = (TextView)itemView.findViewById(R.id.person_name_monabs);
-        personAddress = (TextView)itemView.findViewById(R.id.person_address_monabs);
-        personPhoto = (ImageView)itemView.findViewById(R.id.circleView_monabs);
+        monNom = (TextView)itemView.findViewById(R.id.monNom);
+        monDes = (TextView)itemView.findViewById(R.id.monDes);
+        monImg = (ImageView)itemView.findViewById(R.id.monImg);
         fragMana = fragmentManager;
     }
 
@@ -31,7 +31,7 @@ public class RecyclerViewHoldersMonAbs extends RecyclerView.ViewHolder implement
     public void onClick(View view) {
         //Toast.makeText(view.getContext(), "Monumento " + getPosition(), Toast.LENGTH_SHORT).show();
 
-        categoria = RecyclerViewHolders.categoria;
+        categoria = RecyclerViewHoldersCat.categoria;
 
         monumento = getPosition();
 

@@ -34,13 +34,13 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
     String titulo;
     ArrayList<Integer> lista = new ArrayList<Integer>();
 
-    List<ItemObjectDescMon> rowListItem = new ArrayList<ItemObjectDescMon>();
+    List<DescMonObject> rowListItem = new ArrayList<DescMonObject>();
 
     public DescMonumentoFragment() {
         // Required empty public constructor
     }
 
-    public void setData(List<ItemObjectDescMon> ls) {
+    public void setData(List<DescMonObject> ls) {
 
         rowListItem = ls;
     }
@@ -114,13 +114,13 @@ public class DescMonumentoFragment extends Fragment implements BaseSliderView.On
         lLayout = new LinearLayoutManager(getActivity().getParent());
 
 
-        /*rowListItem.add(new ItemObjectDescMon("Nombre","Sierra Nevada: Montaña Sagrada",""));
-        rowListItem.add(new ItemObjectDescMon("Autor", "Gabriel Beltrán",""));
-        rowListItem.add(new ItemObjectDescMon("Medidas", "4.5 mts Alto\n6.0 mts Largo\n4.5 mts Ancho",""));
-        rowListItem.add(new ItemObjectDescMon("Ubicación","Plazoleta de Banderas Gobernación del Cesar",""));
-        rowListItem.add(new ItemObjectDescMon("Categoría", "Abstractos",""));
-        rowListItem.add(new ItemObjectDescMon("Técnica","Acero 304 ensamblado, soldado y bruñido. Ensamble y armado en el sitio determinado",""));
-        rowListItem.add(new ItemObjectDescMon("Reseña","","Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región.Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región."));*/
+        /*rowListItem.add(new DescMonObject("Nombre","Sierra Nevada: Montaña Sagrada",""));
+        rowListItem.add(new DescMonObject("Autor", "Gabriel Beltrán",""));
+        rowListItem.add(new DescMonObject("Medidas", "4.5 mts Alto\n6.0 mts Largo\n4.5 mts Ancho",""));
+        rowListItem.add(new DescMonObject("Ubicación","Plazoleta de Banderas Gobernación del Cesar",""));
+        rowListItem.add(new DescMonObject("Categoría", "Abstractos",""));
+        rowListItem.add(new DescMonObject("Técnica","Acero 304 ensamblado, soldado y bruñido. Ensamble y armado en el sitio determinado",""));
+        rowListItem.add(new DescMonObject("Reseña","","Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región.Este monumento representa a la sierra nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región."));*/
 
 
 

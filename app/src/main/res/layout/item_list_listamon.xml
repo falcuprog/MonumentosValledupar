@@ -8,7 +8,7 @@
     android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/circleView_monabs"
+        android:id="@+id/monImg"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginTop="8dp"
@@ -18,46 +18,40 @@
     </de.hdodenhof.circleimageview.CircleImageView>
 
     <TextView
-        android:id="@+id/person_name_monabs"
+        android:id="@+id/monNom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="person_name"
-        android:layout_alignTop="@+id/circleView_monabs"
-        android:layout_toRightOf="@+id/circleView_monabs"
+        android:text="NombreMonumento"
+        android:layout_alignTop="@+id/monImg"
+        android:layout_toRightOf="@+id/monImg"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="18dp"
         android:textSize="19sp"
         android:textStyle="bold"
         android:textColor="#c2110e"
-        android:layout_toEndOf="@+id/circleView_monabs">
+        android:layout_toEndOf="@+id/monImg">
     </TextView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="person_address"
-        android:id="@+id/person_address_monabs"
+        android:text="DescripcionMonumento"
+        android:id="@+id/monDes"
         android:textSize="12sp"
         android:layout_marginTop="2dp"
-        android:layout_below="@+id/person_name_monabs"
-        android:layout_alignLeft="@+id/person_name_monabs"
-        android:layout_alignStart="@+id/person_name_monabs">
+        android:layout_below="@+id/monNom"
+        android:layout_alignLeft="@+id/monNom"
+        android:layout_alignStart="@+id/monNom">
     </TextView>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#2196F3"
-        android:layout_below="@+id/circleView_monabs"
-        android:layout_alignLeft="@+id/circleView_monabs"
+        android:layout_below="@+id/monImg"
+        android:layout_alignLeft="@+id/monImg"
         android:layout_marginTop="8dp">
     </View>
 
 </RelativeLayout>
 
-<!--<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-</LinearLayout>-->

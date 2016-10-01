@@ -15,31 +15,30 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-public class MonAbsFragment extends Fragment {
+public class ListaMonFragment extends Fragment {
 
     private LinearLayoutManager lLayout;
     private String titulo;
 
-    public MonAbsFragment() {
-        // Required empty public constructor
+    public ListaMonFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_mon_abs, container, false);
 
-        List<ItemObjectMonAbs> rowListItem = RecyclerViewHolders.listaMon;
-        titulo = RecyclerViewHolders.titulo;
+        View view = inflater.inflate(R.layout.fragment_lista_mon, container, false);
+
+        List<MonumentoObject> rowListItem = RecyclerViewHoldersCat.listaMon;
+        titulo = RecyclerViewHoldersCat.titulo;
         //((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(titulo);
 
         lLayout = new LinearLayoutManager(this.getActivity());
 
-        RecyclerView rView = (RecyclerView) view.findViewById(R.id.recycler_view_monabs);
+        RecyclerView rView = (RecyclerView) view.findViewById(R.id.recycler_view_listamon);
         rView.setLayoutManager(lLayout);
 
-        RecyclerViewAdapterMonAbs rcAdapter = new RecyclerViewAdapterMonAbs(view.getContext(), rowListItem, getFragmentManager());
+        RecyclerViewAdapterListaMon rcAdapter = new RecyclerViewAdapterListaMon(view.getContext(), rowListItem, getFragmentManager());
         rView.setAdapter(rcAdapter);
 
         return view;
@@ -55,23 +54,6 @@ public class MonAbsFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         return super.onOptionsItemSelected(item);
     }
-
-/*    private List<ItemObjectMonAbs> getAllItemList(){
-
-        List<ItemObjectMonAbs> allItems = new ArrayList<ItemObjectMonAbs>();
-        allItems.add(new ItemObjectMonAbs("Peter James", "Vildansvagen 19, Lund Sweden", R.drawable.slider1_copia));
-        allItems.add(new ItemObjectMonAbs("Henry Jacobs", "3 Villa Crescent London, UK", R.drawable.slider2_copia));
-        allItems.add(new ItemObjectMonAbs("Bola Olumide", "Victoria Island Lagos, Nigeria", R.drawable.slider3_copia));
-        allItems.add(new ItemObjectMonAbs("Chidi Johnson", "New Heaven Enugu, Nigeria", R.drawable.slider4_copia));
-        allItems.add(new ItemObjectMonAbs("DeGordio Puritio", "Italion Gata, Padova, Italy", R.drawable.slider5_copia));
-        allItems.add(new ItemObjectMonAbs("Gary Cook", "San Fransisco, United States", R.drawable.slider6_copia));
-        allItems.add(new ItemObjectMonAbs("Edith Helen", "Queens Crescent, New Zealand", R.drawable.slider7_copia));
-        allItems.add(new ItemObjectMonAbs("Kingston Dude", "Ivory Lane, Abuja, Nigeria", R.drawable.slider1_copia));
-        allItems.add(new ItemObjectMonAbs("Edwin Bent", "Johnson Road, Port Harcourt, Nigeria", R.drawable.slider2_copia));
-        allItems.add(new ItemObjectMonAbs("Grace Praise", "Federal Quarters, Abuja Nigeria", R.drawable.slider3_copia));
-
-        return allItems;
-    }*/
 
     @Override
     public void onResume() {
@@ -89,7 +71,7 @@ public class MonAbsFragment extends Fragment {
                     Fragment fragment = new BuscatFragment();
                     FragmentManager fragMana = getFragmentManager();
                     fragMana.beginTransaction()
-                            .remove(MonAbsFragment.this)
+                            .remove(ListaMonFragment.this)
                             .replace(R.id.content_frame2, fragment)
                             .commit();
 
@@ -100,5 +82,4 @@ public class MonAbsFragment extends Fragment {
         });
 
     }
-
 }

@@ -29,7 +29,7 @@ public class BuscatFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_buscat, container, false);
 
-        List<ItemObject> rowListItem = getAllItemList();
+        List<CategoriaObject> lsCat = listaCategorias();
         lLayout = new LinearLayoutManager(view.getContext());
 
         //((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Búsqueda Categorías");
@@ -37,7 +37,7 @@ public class BuscatFragment extends Fragment {
         RecyclerView rView = (RecyclerView) view.findViewById(R.id.recycler_view);
         rView.setLayoutManager(lLayout);
 
-        RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(view.getContext(), rowListItem, getFragmentManager());//ojo
+        RecyclerViewAdapterCat rcAdapter = new RecyclerViewAdapterCat(view.getContext(), lsCat, getFragmentManager());
         rView.setAdapter(rcAdapter);
 
         return view;
@@ -54,16 +54,16 @@ public class BuscatFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
-    private List<ItemObject> getAllItemList(){
+    private List<CategoriaObject> listaCategorias(){
 
-        List<ItemObject> allItems = new ArrayList<ItemObject>();
-        allItems.add(new ItemObject("Monumentos Abstractos y Simbólicos", R.drawable.slider1));
-        allItems.add(new ItemObject("Monumentos Culturales y Folclóricos", R.drawable.slider4));
-        allItems.add(new ItemObject("Monumentos Biográficos e Históricos", R.drawable.slider3));
-        allItems.add(new ItemObject("Monumentos Deportivos", R.drawable.slider4));
-        allItems.add(new ItemObject("Monumentos Religiosos", R.drawable.slider7));
+        List<CategoriaObject> lsCat = new ArrayList<CategoriaObject>();
+        lsCat.add(new CategoriaObject("Monumentos Abstractos y Simbólicos", R.drawable.slider1));
+        lsCat.add(new CategoriaObject("Monumentos Culturales y Folclóricos", R.drawable.slider4));
+        lsCat.add(new CategoriaObject("Monumentos Biográficos e Históricos", R.drawable.slider3));
+        lsCat.add(new CategoriaObject("Monumentos Deportivos", R.drawable.slider4));
+        lsCat.add(new CategoriaObject("Monumentos Religiosos", R.drawable.slider7));
 
-        return allItems;
+        return lsCat;
     }
 
     @Override
