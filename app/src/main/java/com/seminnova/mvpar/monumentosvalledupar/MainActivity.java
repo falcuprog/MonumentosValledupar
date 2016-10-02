@@ -72,18 +72,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         int id = item.getItemId();
 
-        if (id == R.id.inicio_id) {
+        final Fragment fragmentById = getSupportFragmentManager().findFragmentById(R.id.content_frame2);
+
+        if (id == R.id.inicio_id && !fragmentById.getClass().getName().equals("com.seminnova.mvpar.monumentosvalledupar.InicioFragment")) {
 
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.content_frame2, new InicioFragment())
                     .commit();
 
-        } else if (id == R.id.busqr_id) {
+        } else if (id == R.id.busqr_id && !fragmentById.getClass().getName().equals("com.seminnova.mvpar.monumentosvalledupar.CodigoqrFragment")) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.content_frame2, new CodigoqrFragment())
                     .commit();
 
-        } else if (id == R.id.busgps_id) {
+        } else if (id == R.id.busgps_id && !fragmentById.getClass().getName().equals("com.seminnova.mvpar.monumentosvalledupar.BusgpsFragment")) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.content_frame2, new BusgpsFragment())
                     .commit();

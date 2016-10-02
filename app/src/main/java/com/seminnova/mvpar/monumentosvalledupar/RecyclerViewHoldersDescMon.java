@@ -4,13 +4,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import me.biubiubiu.justifytext.library.JustifyTextView;
+import com.uncopt.android.widget.text.justify.JustifiedTextView;
 
 public class RecyclerViewHoldersDescMon extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     public TextView itemMon;
     public TextView descMon;
-    public JustifyTextView desc2Mon;
+    public JustifiedTextView desc2Mon;
 
     public RecyclerViewHoldersDescMon(View itemView) {
         super(itemView);
@@ -19,7 +19,7 @@ public class RecyclerViewHoldersDescMon extends RecyclerView.ViewHolder implemen
 
         itemMon = (TextView) itemView.findViewById(R.id.item_mon);
         descMon = (TextView) itemView.findViewById(R.id.desc_mon);
-        desc2Mon = (JustifyTextView) itemView.findViewById(R.id.desc2_mon);
+        desc2Mon = (JustifiedTextView) itemView.findViewById(R.id.desc2_mon);
     }
 
     @Override

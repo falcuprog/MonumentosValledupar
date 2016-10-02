@@ -28,10 +28,11 @@
         android:textSize="14sp"
         android:textStyle="normal"
         android:textColor="@android:color/black"
-        android:layout_marginLeft="130dp">
+        android:layout_marginLeft="130dp"
+        android:paddingRight="15dp">
     </TextView>
 
-    <me.biubiubiu.justifytext.library.JustifyTextView
+    <!--<me.biubiubiu.justifytext.library.JustifyTextView
         android:id="@+id/desc2_mon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +42,21 @@
         android:textStyle="normal"
         android:textColor="@android:color/black"
         android:layout_marginLeft="130dp">
-    </me.biubiubiu.justifytext.library.JustifyTextView>
+    </me.biubiubiu.justifytext.library.JustifyTextView>-->
+
+    <com.uncopt.android.widget.text.justify.JustifiedTextView
+        android:id="@+id/desc2_mon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:paddingRight="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:layout_marginLeft="130dp">
+    </com.uncopt.android.widget.text.justify.JustifiedTextView>
 
     <View
         android:layout_width="match_parent"
