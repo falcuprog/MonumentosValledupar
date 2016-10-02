@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         int id = item.getItemId();
 
-        final Fragment fragmentById = getSupportFragmentManager().findFragmentById(R.id.content_frame2);
+        Fragment fragmentById = getSupportFragmentManager().findFragmentById(R.id.content_frame2);
 
         if (id == R.id.inicio_id && !fragmentById.getClass().getName().equals("com.seminnova.mvpar.monumentosvalledupar.InicioFragment")) {
 
