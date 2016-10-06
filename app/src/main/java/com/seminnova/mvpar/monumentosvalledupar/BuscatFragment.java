@@ -58,8 +58,8 @@ public class BuscatFragment extends Fragment {
     private List<CategoriaObject> listaCategorias(){
 
         List<CategoriaObject> lsCat = new ArrayList<CategoriaObject>();
-        lsCat.add(new CategoriaObject("Monumentos Abstractos y Simbólicos", R.drawable.slider1));
-        lsCat.add(new CategoriaObject("Monumentos Culturales y Folclóricos", R.drawable.slider4));
+        lsCat.add(new CategoriaObject("Monumentos Abstractos y Simbólicos", R.drawable.mon_obe));
+        lsCat.add(new CategoriaObject("Monumentos Culturales y Folclóricos", R.drawable.mon_pedazo));
         lsCat.add(new CategoriaObject("Monumentos Biográficos e Históricos", R.drawable.slider3));
         lsCat.add(new CategoriaObject("Monumentos Deportivos", R.drawable.slider4));
         lsCat.add(new CategoriaObject("Monumentos Religiosos", R.drawable.slider7));

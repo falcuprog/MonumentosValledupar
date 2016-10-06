@@ -108,7 +108,7 @@ public class RecyclerViewHoldersCat extends RecyclerView.ViewHolder implements V
         List<MonumentoObject> allItems = new ArrayList<MonumentoObject>();
         allItems.add(new MonumentoObject("Victoria", "", R.drawable.mon_victoria));
         allItems.add(new MonumentoObject("Fortaleza Valor y Justicia", "", R.drawable.mon_forta));
-        allItems.add(new MonumentoObject("Lector del Tiempo", "", R.drawable.slider3_copia));
+        allItems.add(new MonumentoObject("Lector del Tiempo", "", R.drawable.lectoru));
         allItems.add(new MonumentoObject("Sierra Nevada: Montaña Sagrada", "", R.drawable.mon_sierra));
         allItems.add(new MonumentoObject("El Obelisco", "", R.drawable.mon_obe));
         allItems.add(new MonumentoObject("Revolución en Marcha", "", R.drawable.mon_revol));
@@ -122,20 +122,19 @@ public class RecyclerViewHoldersCat extends RecyclerView.ViewHolder implements V
         allItems.add(new MonumentoObject("Pedazo de Acordeón", "", R.drawable.mon_pedazo));
         allItems.add(new MonumentoObject("Conjunto Vallenato", "", R.drawable.mon_cojun));
         allItems.add(new MonumentoObject("Los Poporos", "", R.drawable.mon_poporos));
-        allItems.add(new MonumentoObject("María Mulata", "", R.drawable.mon_cojun));
+        allItems.add(new MonumentoObject("María Mulata", "", R.drawable.mulatau));
         allItems.add(new MonumentoObject("La Sirena", "", R.drawable.mon_sirena));
         allItems.add(new MonumentoObject("Guacharaca", "", R.drawable.mon_guacha));
-        allItems.add(new MonumentoObject("Las Dos Guitarras", "", R.drawable.mon_guitarras));
-        allItems.add(new MonumentoObject("Pelea de Gallos", "", R.drawable.slider1_copia));
-        allItems.add(new MonumentoObject("Caracol de Colores", "", R.drawable.mon_caracol));
-        allItems.add(new MonumentoObject("Tambor de dos Parches", "", R.drawable.slider3_copia));
-        allItems.add(new MonumentoObject("Gaitas", "", R.drawable.slider3_copia));
-        allItems.add(new MonumentoObject("Maraca", "", R.drawable.slider3_copia));
+        allItems.add(new MonumentoObject("Guitarras", "", R.drawable.mon_guitarras));
+        allItems.add(new MonumentoObject("Pelea de Gallos", "", R.drawable.gallosu));
+        allItems.add(new MonumentoObject("Caracol", "", R.drawable.mon_caracol));
+        allItems.add(new MonumentoObject("Gaitas", "", R.drawable.gaitasu));
+        allItems.add(new MonumentoObject("Maraca", "", R.drawable.maracau));
         allItems.add(new MonumentoObject("Acordeón", "", R.drawable.mon_acordeon));
-        allItems.add(new MonumentoObject("Monumento a las Guitarras", "", R.drawable.slider3_copia));
-        allItems.add(new MonumentoObject("Caja", "", R.drawable.mon_caja));
-        allItems.add(new MonumentoObject("Puya y Merengue", "", R.drawable.slider3_copia));
-        allItems.add(new MonumentoObject("Paseo y Son", "", R.drawable.slider3_copia));
+        allItems.add(new MonumentoObject("Monumento a las Guitarras", "", R.drawable.dosguitarrasu));
+        allItems.add(new MonumentoObject("Caja", "", R.drawable.cajau));
+        allItems.add(new MonumentoObject("Puya y Merengue", "", R.drawable.puyau));
+        allItems.add(new MonumentoObject("Paseo y Son", "", R.drawable.paseoysonu));
 
         return allItems;
     }

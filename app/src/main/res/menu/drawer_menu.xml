@@ -35,15 +35,15 @@
         android:checkableBehavior="single">
 
         <item
-            android:id="@+id/contac_id"
-            android:title="Contacto"
-            android:icon="@drawable/email">
-        </item>
-
-        <item
             android:id="@+id/acerca_id"
             android:title="Acerca de"
             android:icon="@drawable/signos_1">
+        </item>
+
+        <item
+            android:id="@+id/contac_id"
+            android:title="Salir"
+            android:icon="@drawable/email">
         </item>
 
     </group>

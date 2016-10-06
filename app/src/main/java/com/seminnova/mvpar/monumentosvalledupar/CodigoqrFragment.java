@@ -154,43 +154,43 @@ public class CodigoqrFragment extends Fragment implements ZXingScannerView.Resul
                 descMonumento.mostrarDescripcion();
                 break;
 
-            case "monumentotambordedosparches":
+            /*case "monumentotambordedosparches":
+                descMonumento = new DescMonumento(1,9,getFragmentManager());
+                descMonumento.mostrarDescripcion();
+                break;*/
+
+            case "monumentogaitas":
                 descMonumento = new DescMonumento(1,9,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
-            case "monumentogaitas":
+            case "monumentomaracas":
                 descMonumento = new DescMonumento(1,10,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
-            case "monumentomaracas":
+            case "monumentoacordeon":
                 descMonumento = new DescMonumento(1,11,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
-            case "monumentoacordeon":
+            case "monumentolasguitarras":
                 descMonumento = new DescMonumento(1,12,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
-            case "monumentolasguitarras":
+            case "monumentocaja":
                 descMonumento = new DescMonumento(1,13,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
-            case "monumentocaja":
+            case "monumentopuyaymerengue":
                 descMonumento = new DescMonumento(1,14,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 
-            case "monumentopuyaymerengue":
-                descMonumento = new DescMonumento(1,15,getFragmentManager());
-                descMonumento.mostrarDescripcion();
-                break;
-
             case "monumentopaseoyson":
-                descMonumento = new DescMonumento(1,16,getFragmentManager());
+                descMonumento = new DescMonumento(1,15,getFragmentManager());
                 descMonumento.mostrarDescripcion();
                 break;
 

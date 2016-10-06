@@ -83,8 +83,7 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Reseña","","Es una semejanza a los antiguos historiadores de la región del Valle de Upar, los cuales estudiaban los archivos, mantenían la organización y conservación de los mismos."));
 
                         titulo = "Lector del Tiempo";
-                        lista.add(R.drawable.slider1);
-                        lista.add(R.drawable.slider2);
+                        lista.add(R.drawable.lectoru);
 
                         break;
                     case 3:
@@ -95,7 +94,7 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Ubicación","Plazoleta de Banderas. Gobernación del Cesar",""));
                         rowListItem.add(new DescMonObject("Categoría", "Abstracto",""));
                         rowListItem.add(new DescMonObject("Técnica","Acero 304 ensamblado, soldado y bruñido,Ensamble y armado en el sitio determinado",""));
-                        rowListItem.add(new DescMonObject("Reseña","","Es una semejanza a los antiguos historiadores de la región del Valle de Upar, los cuales estudiaban los archivos, mantenían la organización y conservación de los mismos."));
+                        rowListItem.add(new DescMonObject("Reseña","","Este monumento representa a la Sierra Nevada de Santa Marta, donde  se resaltan los pisos térmicos, maravillos paisajes y el agua que brota desde esta sierra. Desde esta montaña nacen innumerables ríos que alimentan el agua de la región."));
 
                         titulo = "Sierra Nevada, Montaña Sagrada";
                         lista.add(R.drawable.mon_sierra);
@@ -182,7 +181,7 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Técnica","N.D",""));
                         rowListItem.add(new DescMonObject("Reseña","","Representa a los tres integrantes típicos de la música vallenata: acordeonero, guacharaquero y cajero."));
 
-                        titulo = "Conjunto Vallenato";
+                        titulo = "Homenaje al Folclor Vallenato";
 
                         lista.add(R.drawable.mon_cojun);
 
@@ -215,6 +214,7 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Reseña","","Caracteriza la integración de los elementos que identifica a Colombia y sus costas. (El componente humano, la fauna y la mezcla de las etnias)."));
 
                         titulo = "María Mulata";
+                        lista.add(R.drawable.mulatau);
 
                         break;
 
@@ -228,7 +228,7 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Técnica","Fibra de vidrio",""));
                         rowListItem.add(new DescMonObject("Reseña","","Representa una de las leyendas de tradición en la mitología vallenata conocida como \"La Sirena de Hurtado\" trata de una niña que un  jueves santo fue a bañarse al río Guatapurí y se convirtió en sirena."));
 
-                        titulo = "La sirena";
+                        titulo = "La Sirena";
                         lista.add(R.drawable.mon_sirena);
 
                         break;
@@ -258,8 +258,8 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Técnica","Mosaico de cerámica sobre concreto",""));
                         rowListItem.add(new DescMonObject("Reseña","","Está inspirado en un instrumento alusivo a la música vallenata, la guitarra, la cual tiene unas cuerdas con varios sonidos con los que se puede interpretar una canción o un ritmo."));
 
-                        titulo = "Las Dos Guitarras";
-                        lista.add(R.drawable.slider1);
+                        titulo = "Guitarras";
+                        lista.add(R.drawable.mon_guitarras);
 
                         break;
 
@@ -271,15 +271,16 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Ubicación","Intersección Avenida Simon Bolivar con Trasversal 16C",""));
                         rowListItem.add(new DescMonObject("Categoría", "Folclórico",""));
                         rowListItem.add(new DescMonObject("Técnica","Bronce, hierro y láminas de Aluminio",""));
-                        rowListItem.add(new DescMonObject("Reseña","","En un homenaje a la afición gallística que existe en los departamentos costeños, que evocan una tradición cultural."));
+                        rowListItem.add(new DescMonObject("Reseña","","Es un homenaje a la afición gallística que existe en los departamentos costeños, que evocan una tradición cultural."));
 
                         titulo = "Pelea de Gallos";
+                        lista.add(R.drawable.gallosu);
 
                         break;
 
                     case 8:
 
-                        rowListItem.add(new DescMonObject("Nombre","CARACOL DE COLORES",""));
+                        rowListItem.add(new DescMonObject("Nombre","CARACOL",""));
                         rowListItem.add(new DescMonObject("Autor", "Elsa Marina Losada",""));
                         rowListItem.add(new DescMonObject("Medidas", "","4.70 mts x 4.70 mts x 0.80 mts"));
                         rowListItem.add(new DescMonObject("Ubicación","Avenida 44",""));
@@ -287,11 +288,12 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Técnica","Mosaico de cerámica sobre concreto",""));
                         rowListItem.add(new DescMonObject("Reseña","","Está inspirado en el primer instrumento de sonido que utilizaron los indígenas."));
 
-                        titulo = "Caracol de Colores";
+                        titulo = "Caracol";
+                        lista.add(R.drawable.mon_caracol);
 
                         break;
 
-                    case 9:
+                    /*case 9:
 
                         rowListItem.add(new DescMonObject("Nombre","TAMBOR DE DOS PARCHES",""));
                         rowListItem.add(new DescMonObject("Autor", "Elsa Marina Losada",""));
@@ -303,9 +305,9 @@ public class DescMonumento {
 
                         titulo = "Tambor de Dos Parches";
 
-                        break;
+                        break;*/
 
-                    case 10:
+                    case 9:
 
                         rowListItem.add(new DescMonObject("Nombre","GAITAS",""));
                         rowListItem.add(new DescMonObject("Autor", "Elsa Marina Losada",""));
@@ -316,10 +318,11 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Reseña","","N.D"));
 
                         titulo = "Gaitas";
+                        lista.add(R.drawable.gaitasu);
 
                         break;
 
-                    case 11:
+                    case 10:
 
                         rowListItem.add(new DescMonObject("Nombre","MARACAS",""));
                         rowListItem.add(new DescMonObject("Autor", "Elsa Marina Losada",""));
@@ -330,10 +333,11 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Reseña","","N.D"));
 
                         titulo = "Maraca";
+                        lista.add(R.drawable.maracau);
 
                         break;
 
-                    case 12:
+                    case 11:
 
                         rowListItem.add(new DescMonObject("Nombre","ACORDEÓN",""));
                         rowListItem.add(new DescMonObject("Autor", "Elsa Marina Losada",""));
@@ -344,12 +348,13 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Reseña","","N.D"));
 
                         titulo = "Acordeón";
+                        lista.add(R.drawable.mon_acordeon);
 
                         break;
 
-                    case 13:
+                    case 12:
 
-                        rowListItem.add(new DescMonObject("Nombre","LAS DOS GUITARRAS",""));
+                        rowListItem.add(new DescMonObject("Nombre","MONUMENTO A LAS GUITARRAS",""));
                         rowListItem.add(new DescMonObject("Autor", "Manuel José Rincón",""));
                         rowListItem.add(new DescMonObject("Medidas", "","6.0 mts Alto"));
                         rowListItem.add(new DescMonObject("Ubicación","Tarima Juan R. Leyva. Plaza 1ro de Mayo",""));
@@ -358,10 +363,11 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Reseña","","Representa la importancia de la guitarra en el folclor local y homenajea a los instrumentistas reconocidos en la música vallenata que influyeron en la música y sus expresiones."));
 
                         titulo = "Monumento a las Guitarras";
+                        lista.add(R.drawable.dosguitarrasu);
 
                         break;
 
-                    case 14:
+                    case 13:
 
                         rowListItem.add(new DescMonObject("Nombre","CAJA",""));
                         rowListItem.add(new DescMonObject("Autor", "Elsa Marina Losada",""));
@@ -372,10 +378,11 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Reseña","","N.D"));
 
                         titulo = "Caja";
+                        lista.add(R.drawable.cajau);
 
                         break;
 
-                    case 15:
+                    case 14:
 
                         rowListItem.add(new DescMonObject("Nombre","PUYA Y MERENGUE",""));
                         rowListItem.add(new DescMonObject("Autor", "Elsa Marina Losada",""));
@@ -386,10 +393,11 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Reseña","","N.D"));
 
                         titulo = "Puya y Merengue";
+                        lista.add(R.drawable.puyau);
 
                         break;
 
-                    case 16:
+                    case 15:
 
                         rowListItem.add(new DescMonObject("Nombre","PASEO Y SON",""));
                         rowListItem.add(new DescMonObject("Autor", "Elsa Marina Losada",""));
@@ -400,6 +408,7 @@ public class DescMonumento {
                         rowListItem.add(new DescMonObject("Reseña","","N.D"));
 
                         titulo = "Paseo y Son";
+                        lista.add(R.drawable.paseoysonu);
 
                         break;
                 }

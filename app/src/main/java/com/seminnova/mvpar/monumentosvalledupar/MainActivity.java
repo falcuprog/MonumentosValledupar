@@ -96,9 +96,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .commit();
 
         } else if (id == R.id.contac_id) {
-            getSupportFragmentManager().beginTransaction()
+            /*getSupportFragmentManager().beginTransaction()
                     .replace(R.id.content_frame2, new ContaFragment())
-                    .commit();
+                    .commit();*/
+            this.finish();
 
         } else if (id == R.id.acerca_id) {
             getSupportFragmentManager().beginTransaction()
